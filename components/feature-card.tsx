@@ -1,21 +1,31 @@
-import type { LucideIcon } from "lucide-react";
-
 export function FeatureCard({
-  icon: Icon,
+  index,
   title,
   description,
+  first,
+  last,
 }: {
-  icon: LucideIcon;
+  index: number;
   title: string;
   description: string;
+  first?: boolean;
+  last?: boolean;
 }) {
   return (
-    <div className="rounded-xl border border-border bg-background p-8">
-      <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent-soft text-accent">
-        <Icon size={22} strokeWidth={2} />
+    <div
+      className={`grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] items-start gap-x-12 gap-y-6 ${
+        first ? "pb-14" : last ? "pt-14" : "py-14"
+      } ${last ? "" : "border-b border-border"}`}
+    >
+      <div>
+        <p className="mb-5 font-mono text-xs tracking-[0.1em] text-accent">
+          {String(index).padStart(2, "0")}
+        </p>
+        <h3 className="text-2xl font-bold leading-tight tracking-[-0.028em] text-ink">
+          {title}
+        </h3>
       </div>
-      <h3 className="mt-5 text-lg font-semibold text-foreground">{title}</h3>
-      <p className="mt-3 text-base leading-7 text-muted">{description}</p>
+      <p className="text-lg leading-[1.62] text-muted">{description}</p>
     </div>
   );
 }

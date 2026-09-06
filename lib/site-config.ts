@@ -1,9 +1,9 @@
 export const company = {
-  name: "Open Corporate",
-  legalName: "Open Corporate Software, S.L.",
+  name: "OPENvarez",
+  legalName: "OPENvarez Software, S.L.",
   taxId: "B00000000 (CIF a completar)",
   address: "Calle Ejemplo 123, 28001 Madrid, España",
-  email: "info@opencorporate.example",
+  email: "info@openvarez.example",
 };
 
 export type Product = {
@@ -12,6 +12,7 @@ export type Product = {
   sector: string;
   tagline: string;
   href: string;
+  image: string;
 };
 
 export const products: Product[] = [
@@ -22,6 +23,7 @@ export const products: Product[] = [
     tagline:
       "Agrega, analiza y te alerta sobre licitaciones de construcción en toda España, automáticamente.",
     href: "/open2licita",
+    image: "/screenshots/o2l-panel.png",
   },
   {
     slug: "riskrail402",
@@ -30,6 +32,7 @@ export const products: Product[] = [
     tagline:
       "Digitaliza el análisis de riesgo ferroviario conforme al Reglamento (UE) 402/2013, sin Excel ni Word.",
     href: "/riskrail402",
+    image: "/screenshots/rr-dashboard.png",
   },
 ];
 

@@ -1,35 +1,91 @@
 @import "tailwindcss";
 
+/*
+  Token names follow the "Design Tokens" table in
+  dis_referencia/design_handoff_openvarez_web/README.md (text -> ink,
+  text-body -> body, etc. — renamed only to avoid the awkward
+  Tailwind utility "text-text").
+*/
 :root {
-  --background: #ffffff;
-  --surface: #f6f7f9;
-  --foreground: #101317;
-  --muted: #5b6472;
-  --border: #e4e7eb;
+  --bg: #060b09;
+  --bg-alt: #080e0c;
+  --surface: #0c1411;
+  --surface-deep: #0a110e;
 
-  --accent: #1d4ed8;
-  --accent-hover: #1e40af;
-  --accent-foreground: #ffffff;
-  --accent-soft: #eef2ff;
+  --accent: #3ee89a;
+  --accent-hover: #7df3be;
+  --accent-ink: #04120c;
+
+  --ink: #f1faf6;
+  --ink-strong: #eaf6f1;
+  --body: #9db5ac;
+  --muted: #8ca39b;
+  --chip: #c6dad3;
+  --dim: #6c8a80;
+  --faint: #4e6a61;
+
+  --border: #1b2a25;
+  --border-subtle: #16221d;
+  --border-faint: #131e1a;
+  --border-chip: #23372f;
+  --border-strong: #2a3e36;
+
+  --dot: #1f2e29;
+  --nav-ink: #a9c0b8;
+  --nav-hover: #111c18;
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
   --color-surface: var(--surface);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
+  --color-surface-deep: var(--surface-deep);
 
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-strong: var(--ink-strong);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-chip: var(--chip);
+  --color-dim: var(--dim);
+  --color-faint: var(--faint);
+
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-faint: var(--border-faint);
+  --color-border-chip: var(--border-chip);
+  --color-border-strong: var(--border-strong);
+
+  --color-dot: var(--dot);
+  --color-nav-ink: var(--nav-ink);
+  --color-nav-hover: var(--nav-hover);
+
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--ink);
+  text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
 }

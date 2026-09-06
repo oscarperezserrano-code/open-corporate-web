@@ -1,62 +1,71 @@
 import Link from "next/link";
+import Image from "next/image";
 import { company, nav } from "@/lib/site-config";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-10 md:grid-cols-3">
-          <div>
-            <p className="text-lg font-semibold text-foreground">
-              {company.name}
-            </p>
-            <p className="mt-3 max-w-xs text-sm leading-6 text-muted">
-              Software especializado para sectores de infraestructura y
-              construcción.
-            </p>
+    <footer className="border-t border-border-subtle bg-bg-alt">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-12 px-6 py-20">
+        <div>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/brand/mark.png"
+              alt=""
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-md object-contain mix-blend-screen"
+            />
+            <span className="font-mono text-[15px] font-bold leading-none">
+              <span className="text-ink-strong">OPEN</span>
+              <span className="text-accent">varez</span>
+            </span>
           </div>
-
-          <div>
-            <p className="text-sm font-semibold text-foreground">
-              Navegación
-            </p>
-            <ul className="mt-3 space-y-2">
-              {nav.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-muted transition-colors hover:text-accent"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-sm font-semibold text-foreground">Contacto</p>
-            <ul className="mt-3 space-y-2 text-sm text-muted">
-              <li>
-                <a
-                  href={`mailto:${company.email}`}
-                  className="transition-colors hover:text-accent"
-                >
-                  {company.email}
-                </a>
-              </li>
-              <li>{company.address}</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} {company.legalName}. Todos los
-            derechos reservados.
+          <p className="mt-5 max-w-[30ch] text-[15px] leading-relaxed text-dim">
+            Software especializado para sectores de infraestructura y
+            construcción.
           </p>
-          <p>{company.taxId}</p>
         </div>
+
+        <div>
+          <p className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">
+            Navegación
+          </p>
+          <ul className="mt-5 flex flex-col items-start gap-3">
+            {nav.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-[15.5px] text-chip transition-colors hover:text-accent"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">
+            Contacto
+          </p>
+          <ul className="mt-5 flex flex-col items-start gap-3">
+            <li>
+              <a
+                href={`mailto:${company.email}`}
+                className="text-[15.5px] text-chip transition-colors hover:text-accent"
+              >
+                {company.email}
+              </a>
+            </li>
+            <li className="text-[15.5px] text-dim">{company.address}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-4 border-t border-border-faint px-6 py-6">
+        <p className="font-mono text-[11px] text-faint">
+          © {new Date().getFullYear()} · {company.legalName} · {company.taxId}
+        </p>
       </div>
     </footer>
   );

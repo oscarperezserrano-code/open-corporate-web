@@ -31,16 +31,16 @@ export function ContactForm({ product }: { product: string }) {
   }
 
   const inputClasses =
-    "w-full rounded-md border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-soft";
+    "w-full rounded-md border border-border bg-surface-deep px-4 py-2.5 text-sm text-ink placeholder:text-faint focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20";
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-xl border border-border bg-background p-8"
+      className="rounded-xl border border-border bg-surface-deep/60 p-8"
     >
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="sm:col-span-1">
-          <label htmlFor="name" className="text-sm font-medium text-foreground">
+          <label htmlFor="name" className="text-sm font-medium text-ink">
             Nombre
           </label>
           <input
@@ -53,7 +53,7 @@ export function ContactForm({ product }: { product: string }) {
           />
         </div>
         <div className="sm:col-span-1">
-          <label htmlFor="email" className="text-sm font-medium text-foreground">
+          <label htmlFor="email" className="text-sm font-medium text-ink">
             Email
           </label>
           <input
@@ -66,10 +66,7 @@ export function ContactForm({ product }: { product: string }) {
           />
         </div>
         <div className="sm:col-span-2">
-          <label
-            htmlFor="company"
-            className="text-sm font-medium text-foreground"
-          >
+          <label htmlFor="company" className="text-sm font-medium text-ink">
             Empresa
           </label>
           <input
@@ -82,10 +79,7 @@ export function ContactForm({ product }: { product: string }) {
           />
         </div>
         <div className="sm:col-span-2">
-          <label
-            htmlFor="message"
-            className="text-sm font-medium text-foreground"
-          >
+          <label htmlFor="message" className="text-sm font-medium text-ink">
             Mensaje
           </label>
           <textarea
@@ -100,7 +94,7 @@ export function ContactForm({ product }: { product: string }) {
 
       <button
         type="submit"
-        className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent-hover sm:w-auto"
+        className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-bold text-accent-ink transition-colors hover:bg-accent-hover sm:w-auto"
       >
         Solicita una demo
       </button>

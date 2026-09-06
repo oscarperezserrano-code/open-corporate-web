@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { MeshArt } from "@/components/mesh-art";
 
 export function CTASection({
   title,
@@ -10,15 +11,26 @@ export function CTASection({
   children: ReactNode;
 }) {
   return (
-    <section id="demo" className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-12 lg:grid-cols-2">
+    <section
+      id="demo"
+      className="mx-auto max-w-[1240px] px-6 pb-[clamp(96px,10vw,140px)] pt-[clamp(80px,9vw,120px)]"
+    >
+      <div className="relative overflow-hidden rounded-[20px] border border-border bg-surface p-[clamp(40px,5vw,76px)]">
+        <MeshArt
+          style={{
+            top: "-28%",
+            right: "-6%",
+            width: "min(720px,80%)",
+            opacity: 0.4,
+          }}
+        />
+        <div className="relative grid gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="max-w-[22ch] text-[clamp(28px,3.4vw,46px)] font-bold leading-[1.06] tracking-[-0.035em] text-ink">
               {title}
             </h2>
             {subtitle && (
-              <p className="mt-4 max-w-md text-lg leading-8 text-muted">
+              <p className="mt-5 max-w-[48ch] text-[17px] leading-[1.6] text-body">
                 {subtitle}
               </p>
             )}

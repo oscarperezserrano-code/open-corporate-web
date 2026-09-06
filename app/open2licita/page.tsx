@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Database, BrainCircuit, BellRing } from "lucide-react";
-import { HardHat, Building2, Users, ClipboardList } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { FeatureCard } from "@/components/feature-card";
 import { CTASection } from "@/components/cta-section";
 import { ContactForm } from "@/components/contact-form";
 import { BrowserMockup } from "@/components/browser-mockup";
+import { AudienceList } from "@/components/audience-list";
+import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: "Open2Licita — Licitaciones de construcción con IA",
@@ -15,19 +15,16 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    icon: Database,
     title: "Cobertura integral vía Open Data",
     description:
       "Agregamos automáticamente datos públicos de contratación de múltiples fuentes de open data, con actualización continua. Sin huecos, sin depender de revisiones manuales de boletines.",
   },
   {
-    icon: BrainCircuit,
     title: "IA para análisis de licitaciones y adjudicaciones",
     description:
       "Nuestros modelos de IA procesan cada expediente para extraer y estructurar la información clave (importes, plazos, adjudicatarios, criterios de valoración) y detectan patrones en el histórico de adjudicaciones, convirtiendo documentos dispersos en inteligencia accionable.",
   },
   {
-    icon: BellRing,
     title: "Alertas e informes generados automáticamente",
     description:
       "El sistema identifica oportunidades relevantes para cada usuario y genera alertas e informes periódicos sin intervención manual, combinando reglas de negocio con análisis inteligente del contenido de las licitaciones.",
@@ -35,55 +32,74 @@ const features = [
 ];
 
 const audience = [
-  { icon: HardHat, label: "Constructoras" },
-  { icon: Building2, label: "Estudios de arquitectura" },
-  { icon: ClipboardList, label: "Contratistas" },
-  { icon: Users, label: "Consultoras de licitaciones" },
+  "Constructoras",
+  "Estudios de arquitectura",
+  "Contratistas",
+  "Consultoras de licitaciones",
 ];
 
 export default function Open2LicitaPage() {
   return (
     <>
       <Hero
+        breadcrumb={{ label: "← Soluciones", href: "/#soluciones" }}
         eyebrow="Construcción · Licitaciones públicas"
         title="Encontrar y analizar licitaciones de construcción, sin el trabajo manual"
-        subtitle="Hoy, seguir las licitaciones relevantes significa revisar a mano decenas de boletines dispersos. Open2Licita agrega, analiza y te alerta automáticamente sobre las oportunidades que importan para tu negocio."
+        problemSolution={{
+          problem:
+            "Hoy, seguir las licitaciones relevantes significa revisar a mano decenas de boletines dispersos.",
+          solution:
+            "Open2Licita agrega, analiza y te alerta automáticamente sobre las oportunidades que importan para tu negocio.",
+        }}
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
-        visual={<BrowserMockup url="app.open2licita.com/panel" />}
       />
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-6 md:grid-cols-3">
-          {features.map((feature) => (
-            <FeatureCard key={feature.title} {...feature} />
-          ))}
-        </div>
-      </section>
+      <Reveal className="px-6 pt-[clamp(56px,7vw,88px)]">
+        <BrowserMockup
+          src="/screenshots/o2l-mapa.png"
+          alt="Open2Licita — panel de mando: contratos por provincia y por tipo de organismo"
+          width={2880}
+          height={1456}
+          wide
+        />
+      </Reveal>
 
-      <section className="border-t border-border bg-surface">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Para quién
+      <Reveal>
+        <section className="mx-auto max-w-[1240px] px-6 py-[clamp(80px,9vw,120px)]">
+          <h2 className="mb-14 text-[clamp(28px,3.2vw,42px)] font-bold tracking-[-0.035em] text-ink">
+            Cómo funciona
           </h2>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-muted">
-            Open2Licita está pensado para cualquier organización que necesite
-            seguir de cerca la contratación pública de obra y construcción.
-          </p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {audience.map((item) => (
-              <div
-                key={item.label}
-                className="flex items-center gap-3 rounded-xl border border-border bg-background p-6"
-              >
-                <item.icon size={22} className="text-accent" strokeWidth={2} />
-                <span className="text-base font-medium text-foreground">
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          {features.map((feature, i) => (
+            <FeatureCard
+              key={feature.title}
+              index={i + 1}
+              first={i === 0}
+              last={i === features.length - 1}
+              {...feature}
+            />
+          ))}
+        </section>
+      </Reveal>
+
+      <Reveal className="px-6 pt-[clamp(80px,9vw,112px)]">
+        <BrowserMockup
+          src="/screenshots/o2l-licitaciones.png"
+          alt="Open2Licita — listado de licitaciones activas"
+          width={2404}
+          height={1541}
+          framed={false}
+          wide
+          caption="Listado de licitaciones activas con filtros por organismo, provincia, categoría y fuente."
+        />
+      </Reveal>
+
+      <Reveal>
+        <AudienceList
+          title="Para quién"
+          description="Open2Licita está pensado para cualquier organización que necesite seguir de cerca la contratación pública de obra y construcción."
+          items={audience}
+        />
+      </Reveal>
 
       <CTASection
         title="Solicita una demo de Open2Licita"

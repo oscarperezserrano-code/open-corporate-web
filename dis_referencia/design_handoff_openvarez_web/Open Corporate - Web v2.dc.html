@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; background: #060B09; }
+  body { margin: 0; background: #060B09; color: #E8F2EE; font-family: Manrope, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  a { color: #3EE89A; text-decoration: none; }
+  a:hover { color: #7DF3BE; }
+  ::selection { background: #3EE89A; color: #060B09; }
+  @keyframes ovPulse { 0%,100% { opacity: .55 } 50% { opacity: 1 } }
+</style>
+</helmet>
+<div style="min-height:100vh;background:#060B09;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:60;background:rgba(6,11,9,0.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #16221D">
+    <div style="max-width:1240px;margin:0 auto;padding:12px 24px;min-height:76px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px">
+      <div onClick="{{ goHome }}" style="display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none">
+        <img src="media/openvarez-mark.png" alt="" style="width:44px;height:44px;object-fit:contain;mix-blend-mode:screen;border-radius:6px" />
+        <div style="display:flex;flex-direction:column;gap:3px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;letter-spacing:-0.01em;line-height:1"><span style="color:#EAF6F1">OPEN</span><span style="color:#3EE89A">varez</span></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:0.42em;color:#6C8A80;line-height:1">TECHLAB</div>
+        </div>
+      </div>
+      <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:4px">
+        <div onClick="{{ goO2L }}" style="padding:9px 14px;border-radius:8px;font-size:14.5px;font-weight:500;color:#A9C0B8;cursor:pointer" style-hover="background:#111C18;color:#EAF6F1">Open2Licita</div>
+        <div onClick="{{ goRR }}" style="padding:9px 14px;border-radius:8px;font-size:14.5px;font-weight:500;color:#A9C0B8;cursor:pointer" style-hover="background:#111C18;color:#EAF6F1">RiskRail402</div>
+        <div onClick="{{ goNosotros }}" style="padding:9px 14px;border-radius:8px;font-size:14.5px;font-weight:500;color:#A9C0B8;cursor:pointer" style-hover="background:#111C18;color:#EAF6F1">Nosotros</div>
+        <a href="#contacto" style="margin-left:10px;padding:11px 20px;border-radius:8px;background:#3EE89A;color:#04120C;font-size:14.5px;font-weight:700" style-hover="background:#7DF3BE;color:#04120C">Solicita una demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═════════════ HOME ═════════════ -->
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <main>
+    <section style="position:relative;border-bottom:1px solid #16221D;overflow:hidden">
+      <img src="media/openvarez-mesh.png" alt="" style="position:absolute;top:-8%;right:-14%;width:min(1180px,105%);mix-blend-mode:screen;opacity:0.72;pointer-events:none;filter:saturate(1.15);mask-image:radial-gradient(70% 52% at 66% 30%, #000 25%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, #000 40%, rgba(0,0,0,0) 82%);-webkit-mask-image:radial-gradient(70% 52% at 66% 30%, #000 25%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, #000 40%, rgba(0,0,0,0) 82%);mask-composite:intersect;-webkit-mask-composite:source-in;" />
+      <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 12% 40%, #060B09 42%, rgba(6,11,9,0.55) 68%, rgba(6,11,9,0) 100%);pointer-events:none"></div>
+      <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(96px,12vw,170px) 24px clamp(80px,9vw,120px)">
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 11px;border:1px solid #23372F;border-radius:100px;background:rgba(12,20,17,0.7)">
+          <span style="width:6px;height:6px;border-radius:50%;background:#3EE89A;box-shadow:0 0 10px #3EE89A;animation:ovPulse 2.6s ease-in-out infinite;display:block"></span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#8CA39B">Software para sectores regulados</span>
+        </div>
+        <h1 style="margin:34px 0 0;font-size:clamp(40px,6.4vw,86px);line-height:1.0;letter-spacing:-0.04em;font-weight:700;max-width:19ch;color:#F1FAF6">Digitalizamos los procesos críticos de la infraestructura</h1>
+        <p style="margin:34px 0 0;font-size:20px;line-height:1.55;max-width:58ch;color:#9DB5AC">Plataformas SaaS verticales que combinan datos abiertos, inteligencia artificial y cumplimiento normativo para los sectores de construcción y ferroviario.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:46px">
+          <a href="#soluciones" style="padding:15px 28px;border-radius:10px;background:#3EE89A;color:#04120C;font-size:15.5px;font-weight:700" style-hover="background:#7DF3BE;color:#04120C">Ver soluciones</a>
+          <a href="#contacto" style="padding:15px 28px;border-radius:10px;background:rgba(12,20,17,0.6);border:1px solid #2A3E36;color:#EAF6F1;font-size:15.5px;font-weight:600" style-hover="border-color:#3EE89A;color:#3EE89A">Solicita una demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-bottom:1px solid #16221D;background:#080E0C">
+      <div style="max-width:1240px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+        <div style="padding:42px 32px 42px 0;border-right:1px solid #16221D">
+          <div style="font-size:38px;font-weight:700;letter-spacing:-0.035em;color:#F1FAF6">2</div>
+          <div style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6C8A80">Sectores regulados</div>
+        </div>
+        <div style="padding:42px 32px;border-right:1px solid #16221D">
+          <div style="font-size:38px;font-weight:700;letter-spacing:-0.035em;color:#F1FAF6">+1.600</div>
+          <div style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6C8A80">Expedientes analizados</div>
+        </div>
+        <div style="padding:42px 32px;border-right:1px solid #16221D">
+          <div style="font-size:38px;font-weight:700;letter-spacing:-0.035em;color:#F1FAF6">+780 M€</div>
+          <div style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6C8A80">En adjudicaciones seguidas</div>
+        </div>
+        <div style="padding:42px 0 42px 32px">
+          <div style="font-size:38px;font-weight:700;letter-spacing:-0.035em;color:#F1FAF6">402/2013</div>
+          <div style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6C8A80">Reglamento (UE) cubierto</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="soluciones" data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px 0">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-bottom:52px">
+        <h2 style="margin:0;font-size:clamp(30px,3.6vw,48px);line-height:1.06;letter-spacing:-0.035em;font-weight:700;color:#F1FAF6">Nuestras soluciones</h2>
+        <p style="margin:0;max-width:42ch;font-size:16.5px;line-height:1.6;color:#8CA39B">Dos plataformas verticales, cada una construida sobre la normativa y los datos de su sector.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px">
+
+        <article onClick="{{ goO2L }}" style="background:#0C1411;border:1px solid #1B2A25;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease" style-hover="transform:translateY(-4px);border-color:#3EE89A;box-shadow:0 24px 60px -30px rgba(62,232,154,0.35)">
+          <div style="height:220px;overflow:hidden;background:#060B09;border-bottom:1px solid #1B2A25">
+            <img src="media/o2l-panel.png" alt="Panel de mando de Open2Licita" style="width:100%;display:block;opacity:0.92" />
+          </div>
+          <div style="padding:34px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#3EE89A">Construcción · licitación pública</div>
+            <h3 style="margin:18px 0 0;font-size:32px;letter-spacing:-0.03em;font-weight:700;color:#F1FAF6">Open2Licita</h3>
+            <p style="margin:14px 0 0;font-size:16.5px;line-height:1.6;color:#9DB5AC">Agrega, analiza y alerta sobre licitaciones de construcción a partir de datos abiertos de contratación pública.</p>
+            <div style="margin-top:28px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:#3EE89A">Ver más <span style="font-family:'JetBrains Mono',monospace">→</span></div>
+          </div>
+        </article>
+
+        <article onClick="{{ goRR }}" style="background:#0C1411;border:1px solid #1B2A25;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease" style-hover="transform:translateY(-4px);border-color:#3EE89A;box-shadow:0 24px 60px -30px rgba(62,232,154,0.35)">
+          <div style="height:220px;overflow:hidden;background:#060B09;border-bottom:1px solid #1B2A25">
+            <img src="media/rr-dashboard.png" alt="Dashboard de RiskRail402" style="width:100%;display:block;opacity:0.92" />
+          </div>
+          <div style="padding:34px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#3EE89A">Ferroviario · gestión del riesgo</div>
+            <h3 style="margin:18px 0 0;font-size:32px;letter-spacing:-0.03em;font-weight:700;color:#F1FAF6">RiskRail402</h3>
+            <p style="margin:14px 0 0;font-size:16.5px;line-height:1.6;color:#9DB5AC">Digitaliza el análisis de riesgo ante cambios ferroviarios conforme al Reglamento (UE) 402/2013, con trazabilidad completa.</p>
+            <div style="margin-top:28px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:#3EE89A">Ver más <span style="font-family:'JetBrains Mono',monospace">→</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="nosotros" data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px 0">
+      <h2 style="margin:0;font-size:clamp(30px,3.6vw,48px);line-height:1.06;letter-spacing:-0.035em;font-weight:700;color:#F1FAF6">Por qué nosotros</h2>
+      <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:#16221D;border:1px solid #1B2A25;border-radius:16px;overflow:hidden">
+        <div style="background:#0C1411;padding:44px 34px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em">01</div>
+          <h3 style="margin:24px 0 0;font-size:22px;letter-spacing:-0.02em;font-weight:700;color:#F1FAF6">Especialización sectorial</h3>
+          <p style="margin:14px 0 0;font-size:16px;line-height:1.62;color:#8CA39B">No construimos software genérico. Cada plataforma nace del proceso real de su sector: los boletines de contratación, las fases del análisis de riesgo, el vocabulario de quien lo usa.</p>
+        </div>
+        <div style="background:#0C1411;padding:44px 34px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em">02</div>
+          <h3 style="margin:24px 0 0;font-size:22px;letter-spacing:-0.02em;font-weight:700;color:#F1FAF6">IA aplicada, no decorativa</h3>
+          <p style="margin:14px 0 0;font-size:16px;line-height:1.62;color:#8CA39B">Nuestros modelos hacen el trabajo pesado: extraen y estructuran información de expedientes, detectan patrones y redactan borradores técnicos listos para revisión experta.</p>
+        </div>
+        <div style="background:#0C1411;padding:44px 34px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em">03</div>
+          <h3 style="margin:24px 0 0;font-size:22px;letter-spacing:-0.02em;font-weight:700;color:#F1FAF6">Cumplimiento normativo</h3>
+          <p style="margin:14px 0 0;font-size:16px;line-height:1.62;color:#8CA39B">Trazabilidad, firma electrónica y auditoría integradas de serie. Diseñado para superar la revisión de una entidad evaluadora o de un órgano de contratación.</p>
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px 0">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6C8A80;text-align:center">Confían en nosotros</div>
+      <div style="margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px">
+        <div style="height:80px;border:1px dashed #23372F;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#4E6A61">logo cliente</div>
+        <div style="height:80px;border:1px dashed #23372F;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#4E6A61">logo cliente</div>
+        <div style="height:80px;border:1px dashed #23372F;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#4E6A61">logo cliente</div>
+        <div style="height:80px;border:1px dashed #23372F;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#4E6A61">logo cliente</div>
+        <div style="height:80px;border:1px dashed #23372F;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#4E6A61">logo cliente</div>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px clamp(96px,10vw,140px)">
+      <div style="position:relative;overflow:hidden;border:1px solid #1B2A25;background:#0C1411;border-radius:20px;padding:clamp(40px,5vw,76px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px">
+        <img src="media/openvarez-mesh.png" alt="" style="position:absolute;top:-28%;right:-6%;width:min(720px,80%);mix-blend-mode:screen;opacity:0.4;pointer-events:none;mask-image:radial-gradient(70% 52% at 66% 30%, #000 25%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, #000 40%, rgba(0,0,0,0) 82%);-webkit-mask-image:radial-gradient(70% 52% at 66% 30%, #000 25%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, #000 40%, rgba(0,0,0,0) 82%);mask-composite:intersect;-webkit-mask-composite:source-in;" />
+        <div style="position:relative">
+          <h2 style="margin:0;color:#F1FAF6;font-size:clamp(28px,3.4vw,46px);line-height:1.06;letter-spacing:-0.035em;font-weight:700;max-width:22ch">¿Hablamos de tu proceso?</h2>
+          <p style="margin:20px 0 0;color:#9DB5AC;font-size:17px;line-height:1.6;max-width:48ch">Te enseñamos la plataforma con datos de tu sector y valoramos juntos el encaje.</p>
+        </div>
+        <a href="#contacto" style="position:relative;padding:16px 30px;border-radius:10px;background:#3EE89A;color:#04120C;font-size:16px;font-weight:700;white-space:nowrap" style-hover="background:#7DF3BE;color:#04120C">Solicita una demo</a>
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <!-- ═════════════ OPEN2LICITA ═════════════ -->
+  <sc-if value="{{ isO2L }}" hint-placeholder-val="{{ false }}">
+  <main>
+    <section style="max-width:1240px;margin:0 auto;padding:clamp(72px,8vw,104px) 24px 0">
+      <div onClick="{{ goHome }}" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6C8A80;cursor:pointer;margin-bottom:44px" style-hover="color:#3EE89A">← Soluciones</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:#3EE89A">Construcción · licitación pública</div>
+      <h1 style="margin:30px 0 0;font-size:clamp(44px,7vw,98px);line-height:0.96;letter-spacing:-0.045em;font-weight:700;color:#F1FAF6">Open2Licita</h1>
+      <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 48px;padding-top:44px;border-top:1px solid #1B2A25">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#4E6A61">El problema</div>
+          <p style="margin:18px 0 0;font-size:21px;line-height:1.5;color:#8CA39B;letter-spacing:-0.01em">Encontrar y analizar licitaciones de construcción es lento, manual y disperso en múltiples boletines.</p>
+        </div>
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#3EE89A">La solución</div>
+          <p style="margin:18px 0 0;font-size:21px;line-height:1.5;color:#F1FAF6;letter-spacing:-0.01em;font-weight:500">Una plataforma que agrega, analiza y alerta automáticamente. Todo el mercado de obra pública en un solo panel.</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:46px">
+        <a href="#contacto" style="padding:15px 28px;border-radius:10px;background:#3EE89A;color:#04120C;font-size:15.5px;font-weight:700" style-hover="background:#7DF3BE;color:#04120C">Solicita una demo</a>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1340px;margin:0 auto;padding:clamp(56px,7vw,88px) 24px 0">
+      <div style="border:1px solid #1B2A25;border-radius:16px;overflow:hidden;background:#0C1411;box-shadow:0 50px 100px -60px rgba(62,232,154,0.4)">
+        <div style="height:42px;border-bottom:1px solid #16221D;display:flex;align-items:center;gap:7px;padding:0 16px;background:#0A110E">
+          <span style="width:10px;height:10px;border-radius:50%;background:#1F2E29;display:block"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#1F2E29;display:block"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#1F2E29;display:block"></span>
+        </div>
+        <img src="media/o2l-mapa.png" alt="Open2Licita — panel de mando: contratos por provincia y por tipo de organismo" style="width:100%;display:block" />
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px 0">
+      <h2 style="margin:0 0 56px;font-size:clamp(28px,3.2vw,42px);letter-spacing:-0.035em;font-weight:700;color:#F1FAF6">Cómo funciona</h2>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px 48px;align-items:start;padding-bottom:56px;border-bottom:1px solid #1B2A25">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em;margin-bottom:20px">01</div>
+          <h3 style="margin:0;font-size:26px;line-height:1.2;letter-spacing:-0.028em;font-weight:700;color:#F1FAF6">Cobertura integral vía Open Data</h3>
+        </div>
+        <p style="margin:0;font-size:18px;line-height:1.62;color:#8CA39B">Agregamos automáticamente datos públicos de contratación de múltiples fuentes de open data, con actualización continua. Sin huecos, sin depender de revisiones manuales de boletines.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px 48px;align-items:start;padding:56px 0;border-bottom:1px solid #1B2A25">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em;margin-bottom:20px">02</div>
+          <h3 style="margin:0;font-size:26px;line-height:1.2;letter-spacing:-0.028em;font-weight:700;color:#F1FAF6">IA para análisis de licitaciones y adjudicaciones</h3>
+        </div>
+        <p style="margin:0;font-size:18px;line-height:1.62;color:#8CA39B">Nuestros modelos de IA procesan cada expediente para extraer y estructurar la información clave (importes, plazos, adjudicatarios, criterios de valoración) y detectan patrones en el histórico de adjudicaciones.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px 48px;align-items:start;padding:56px 0 0">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em;margin-bottom:20px">03</div>
+          <h3 style="margin:0;font-size:26px;line-height:1.2;letter-spacing:-0.028em;font-weight:700;color:#F1FAF6">Alertas e informes generados automáticamente</h3>
+        </div>
+        <p style="margin:0;font-size:18px;line-height:1.62;color:#8CA39B">El sistema identifica oportunidades relevantes para cada usuario y genera alertas e informes periódicos sin intervención manual.</p>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1340px;margin:0 auto;padding:clamp(80px,9vw,112px) 24px 0">
+      <div style="border:1px solid #1B2A25;border-radius:16px;overflow:hidden;background:#0C1411">
+        <img src="media/o2l-licitaciones.png" alt="Open2Licita — listado de licitaciones activas" style="width:100%;display:block" />
+      </div>
+      <div style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#4E6A61">Listado de licitaciones activas con filtros por organismo, provincia, categoría y fuente.</div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px 0">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px 48px;align-items:start">
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,42px);letter-spacing:-0.035em;font-weight:700;color:#F1FAF6">Para quién</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <span style="padding:11px 19px;border:1px solid #23372F;border-radius:100px;font-size:15.5px;font-weight:500;background:#0C1411;color:#C6DAD3">Constructoras</span>
+          <span style="padding:11px 19px;border:1px solid #23372F;border-radius:100px;font-size:15.5px;font-weight:500;background:#0C1411;color:#C6DAD3">Estudios de arquitectura</span>
+          <span style="padding:11px 19px;border:1px solid #23372F;border-radius:100px;font-size:15.5px;font-weight:500;background:#0C1411;color:#C6DAD3">Contratistas</span>
+          <span style="padding:11px 19px;border:1px solid #23372F;border-radius:100px;font-size:15.5px;font-weight:500;background:#0C1411;color:#C6DAD3">Consultoras de licitaciones</span>
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px clamp(96px,10vw,140px)">
+      <div style="position:relative;overflow:hidden;border:1px solid #1B2A25;background:#0C1411;border-radius:20px;padding:clamp(40px,5vw,76px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px">
+        <img src="media/openvarez-mesh.png" alt="" style="position:absolute;top:-28%;right:-6%;width:min(720px,80%);mix-blend-mode:screen;opacity:0.4;pointer-events:none;mask-image:radial-gradient(70% 52% at 66% 30%, #000 25%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, #000 40%, rgba(0,0,0,0) 82%);-webkit-mask-image:radial-gradient(70% 52% at 66% 30%, #000 25%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, #000 40%, rgba(0,0,0,0) 82%);mask-composite:intersect;-webkit-mask-composite:source-in;" />
+        <div style="position:relative">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#4E6A61">Open2Licita</div>
+          <h2 style="margin:20px 0 0;color:#F1FAF6;font-size:clamp(28px,3.4vw,46px);line-height:1.06;letter-spacing:-0.035em;font-weight:700;max-width:24ch">Vemos tu sector contigo, con datos reales</h2>
+        </div>
+        <a href="#contacto" style="position:relative;padding:16px 30px;border-radius:10px;background:#3EE89A;color:#04120C;font-size:16px;font-weight:700;white-space:nowrap" style-hover="background:#7DF3BE;color:#04120C">Solicita una demo</a>
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <!-- ═════════════ RISKRAIL402 ═════════════ -->
+  <sc-if value="{{ isRR }}" hint-placeholder-val="{{ false }}">
+  <main>
+    <section style="max-width:1240px;margin:0 auto;padding:clamp(72px,8vw,104px) 24px 0">
+      <div onClick="{{ goHome }}" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6C8A80;cursor:pointer;margin-bottom:44px" style-hover="color:#3EE89A">← Soluciones</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:#3EE89A">Ferroviario · gestión del riesgo</div>
+      <h1 style="margin:30px 0 0;font-size:clamp(44px,7vw,98px);line-height:0.96;letter-spacing:-0.045em;font-weight:700;color:#F1FAF6">RiskRail402</h1>
+      <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 48px;padding-top:44px;border-top:1px solid #1B2A25">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#4E6A61">El problema</div>
+          <p style="margin:18px 0 0;font-size:21px;line-height:1.5;color:#8CA39B;letter-spacing:-0.01em">El análisis de riesgo ante cambios ferroviarios según el Reglamento (UE) 402/2013 se gestiona hoy con Excel y Word, sin trazabilidad.</p>
+        </div>
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#3EE89A">La solución</div>
+          <p style="margin:18px 0 0;font-size:21px;line-height:1.5;color:#F1FAF6;letter-spacing:-0.01em;font-weight:500">Una plataforma digital guiada que blinda todo el proceso, de la evaluación preliminar a la declaración de conformidad.</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:46px">
+        <a href="#contacto" style="padding:15px 28px;border-radius:10px;background:#3EE89A;color:#04120C;font-size:15.5px;font-weight:700" style-hover="background:#7DF3BE;color:#04120C">Solicita una demo</a>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1340px;margin:0 auto;padding:clamp(56px,7vw,88px) 24px 0">
+      <div style="border:1px solid #1B2A25;border-radius:16px;overflow:hidden;background:#0C1411;box-shadow:0 50px 100px -60px rgba(62,232,154,0.4)">
+        <div style="height:42px;border-bottom:1px solid #16221D;display:flex;align-items:center;gap:7px;padding:0 16px;background:#0A110E">
+          <span style="width:10px;height:10px;border-radius:50%;background:#1F2E29;display:block"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#1F2E29;display:block"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#1F2E29;display:block"></span>
+        </div>
+        <img src="media/rr-dashboard.png" alt="RiskRail402 — dashboard de análisis, peligros y medidas de control" style="width:100%;display:block" />
+      </div>
+      <div style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#4E6A61">Dashboard de control: análisis por estado, peligros por nivel de riesgo y seguimiento de medidas.</div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px 0">
+      <h2 style="margin:0 0 56px;font-size:clamp(28px,3.2vw,42px);letter-spacing:-0.035em;font-weight:700;color:#F1FAF6">Cómo funciona</h2>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px 48px;align-items:start;padding-bottom:56px;border-bottom:1px solid #1B2A25">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em;margin-bottom:20px">01</div>
+          <h3 style="margin:0;font-size:26px;line-height:1.2;letter-spacing:-0.028em;font-weight:700;color:#F1FAF6">Proceso guiado en 7 fases, sin Excel ni Word</h3>
+        </div>
+        <p style="margin:0;font-size:18px;line-height:1.62;color:#8CA39B">Flujo digital que guía paso a paso el análisis de riesgo conforme al Reglamento de Ejecución (UE) 402/2013, desde la evaluación preliminar hasta la declaración final de conformidad.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px 48px;align-items:start;padding:56px 0;border-bottom:1px solid #1B2A25">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em;margin-bottom:20px">02</div>
+          <h3 style="margin:0;font-size:26px;line-height:1.2;letter-spacing:-0.028em;font-weight:700;color:#F1FAF6">IA que redacta el primer borrador del análisis</h3>
+        </div>
+        <p style="margin:0;font-size:18px;line-height:1.62;color:#8CA39B">A partir de un título y descripción del cambio, el asistente genera automáticamente el borrador técnico completo, listo para revisión del equipo experto.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px 48px;align-items:start;padding:56px 0 0">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3EE89A;letter-spacing:0.1em;margin-bottom:20px">03</div>
+          <h3 style="margin:0;font-size:26px;line-height:1.2;letter-spacing:-0.028em;font-weight:700;color:#F1FAF6">Trazabilidad y firma electrónica de principio a fin</h3>
+        </div>
+        <p style="margin:0;font-size:18px;line-height:1.62;color:#8CA39B">Cada expediente queda blindado: quién hizo qué, cuándo y con qué justificación, con firma electrónica integrada. Informe de auditoría generado automáticamente.</p>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px 0">
+      <div style="border:1px solid #1B2A25;background:#0A110E;border-radius:20px;padding:clamp(40px,5vw,76px)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#3EE89A">Cumplimiento normativo</div>
+        <h2 style="margin:26px 0 0;color:#F1FAF6;font-size:clamp(26px,3vw,40px);line-height:1.12;letter-spacing:-0.035em;font-weight:700;max-width:30ch">Construido sobre el Reglamento de Ejecución (UE) n.º 402/2013</h2>
+        <p style="margin:24px 0 0;color:#8CA39B;font-size:17.5px;line-height:1.62;max-width:62ch">Relativo al método común de seguridad para la evaluación y valoración del riesgo. La plataforma sigue su estructura de fases y sus requisitos de documentación, y produce el expediente que la entidad evaluadora independiente espera recibir.</p>
+        <div style="margin-top:46px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#16221D;border:1px solid #1B2A25;border-radius:12px;overflow:hidden">
+          <div style="background:#0C1411;padding:30px 26px">
+            <div style="color:#F1FAF6;font-size:15.5px;font-weight:600">Evaluación preliminar</div>
+            <div style="margin-top:10px;color:#6C8A80;font-size:14px;line-height:1.5">Significancia del cambio documentada</div>
+          </div>
+          <div style="background:#0C1411;padding:30px 26px">
+            <div style="color:#F1FAF6;font-size:15.5px;font-weight:600">Gestión del riesgo</div>
+            <div style="margin-top:10px;color:#6C8A80;font-size:14px;line-height:1.5">Peligros, medidas y registro de riesgos</div>
+          </div>
+          <div style="background:#0C1411;padding:30px 26px">
+            <div style="color:#F1FAF6;font-size:15.5px;font-weight:600">Evaluación independiente</div>
+            <div style="margin-top:10px;color:#6C8A80;font-size:14px;line-height:1.5">Expediente trazable para la EEI</div>
+          </div>
+          <div style="background:#0C1411;padding:30px 26px">
+            <div style="color:#F1FAF6;font-size:15.5px;font-weight:600">Declaración de conformidad</div>
+            <div style="margin-top:10px;color:#6C8A80;font-size:14px;line-height:1.5">Firma electrónica e informe de auditoría</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px 0">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px 48px;align-items:start">
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,42px);letter-spacing:-0.035em;font-weight:700;color:#F1FAF6">Para quién</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <span style="padding:11px 19px;border:1px solid #23372F;border-radius:100px;font-size:15.5px;font-weight:500;background:#0C1411;color:#C6DAD3">Operadores ferroviarios</span>
+          <span style="padding:11px 19px;border:1px solid #23372F;border-radius:100px;font-size:15.5px;font-weight:500;background:#0C1411;color:#C6DAD3">Administradores de infraestructura</span>
+          <span style="padding:11px 19px;border:1px solid #23372F;border-radius:100px;font-size:15.5px;font-weight:500;background:#0C1411;color:#C6DAD3">Gestores de seguridad</span>
+          <span style="padding:11px 19px;border:1px solid #23372F;border-radius:100px;font-size:15.5px;font-weight:500;background:#0C1411;color:#C6DAD3">Entidades evaluadoras</span>
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal="1" style="max-width:1240px;margin:0 auto;padding:clamp(80px,9vw,120px) 24px clamp(96px,10vw,140px)">
+      <div style="position:relative;overflow:hidden;border:1px solid #1B2A25;background:#0C1411;border-radius:20px;padding:clamp(40px,5vw,76px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px">
+        <img src="media/openvarez-mesh.png" alt="" style="position:absolute;top:-28%;right:-6%;width:min(720px,80%);mix-blend-mode:screen;opacity:0.4;pointer-events:none;mask-image:radial-gradient(70% 52% at 66% 30%, #000 25%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, #000 40%, rgba(0,0,0,0) 82%);-webkit-mask-image:radial-gradient(70% 52% at 66% 30%, #000 25%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, #000 40%, rgba(0,0,0,0) 82%);mask-composite:intersect;-webkit-mask-composite:source-in;" />
+        <div style="position:relative">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#4E6A61">RiskRail402</div>
+          <h2 style="margin:20px 0 0;color:#F1FAF6;font-size:clamp(28px,3.4vw,46px);line-height:1.06;letter-spacing:-0.035em;font-weight:700;max-width:24ch">Tu próximo expediente 402, sin un solo Excel</h2>
+        </div>
+        <a href="#contacto" style="position:relative;padding:16px 30px;border-radius:10px;background:#3EE89A;color:#04120C;font-size:16px;font-weight:700;white-space:nowrap" style-hover="background:#7DF3BE;color:#04120C">Solicita una demo</a>
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <footer id="contacto" style="border-top:1px solid #16221D;background:#080E0C">
+    <div style="max-width:1240px;margin:0 auto;padding:84px 24px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:48px">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="media/openvarez-mark.png" alt="" style="width:40px;height:40px;object-fit:contain;mix-blend-mode:screen;border-radius:6px" />
+          <div style="display:flex;flex-direction:column;gap:3px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;line-height:1"><span style="color:#EAF6F1">OPEN</span><span style="color:#3EE89A">varez</span></div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.42em;color:#6C8A80;line-height:1">TECHLAB</div>
+          </div>
+        </div>
+        <p style="margin:22px 0 0;font-size:15px;line-height:1.6;color:#6C8A80;max-width:30ch">Plataformas SaaS para sectores de infraestructura y construcción.</p>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#4E6A61">Productos</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:13px;align-items:flex-start">
+          <div onClick="{{ goO2L }}" style="font-size:15.5px;color:#C6DAD3;cursor:pointer" style-hover="color:#3EE89A">Open2Licita</div>
+          <div onClick="{{ goRR }}" style="font-size:15.5px;color:#C6DAD3;cursor:pointer" style-hover="color:#3EE89A">RiskRail402</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#4E6A61">Contacto</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:13px;align-items:flex-start">
+          <a href="mailto:hola@openvarez.com" style="font-size:15.5px;color:#C6DAD3" style-hover="color:#3EE89A">hola@openvarez.com</a>
+          <a href="tel:+34000000000" style="font-size:15.5px;color:#C6DAD3" style-hover="color:#3EE89A">+34 000 00 00 00</a>
+          <span style="font-size:15.5px;color:#6C8A80">A Coruña, España</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#4E6A61">Legal</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:13px;align-items:flex-start">
+          <a href="#contacto" style="font-size:15.5px;color:#C6DAD3" style-hover="color:#3EE89A">Aviso legal</a>
+          <a href="#contacto" style="font-size:15.5px;color:#C6DAD3" style-hover="color:#3EE89A">Política de privacidad</a>
+          <a href="#contacto" style="font-size:15.5px;color:#C6DAD3" style-hover="color:#3EE89A">Política de cookies</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1240px;margin:0 auto;padding:24px;border-top:1px solid #131E1A;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#4E6A61">© 2026 · OPENvarez Techlab, S.L. · CIF B00000000</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#4E6A61">Inscrita en el Registro Mercantil de A Coruña</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { page: "home" };
+
+  go(page) {
+    this.setState({ page }, () => window.scrollTo({ top: 0, behavior: "auto" }));
+  }
+
+  reveal() {
+    const nodes = document.querySelectorAll('[data-reveal="1"]');
+    if (!nodes.length) return;
+    if (this._io) this._io.disconnect();
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = "1";
+          e.target.style.transform = "none";
+          this._io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.05 });
+    nodes.forEach((n) => {
+      n.style.transition = "opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)";
+      if (n.getBoundingClientRect().top < window.innerHeight * 0.9) {
+        n.style.opacity = "1"; n.style.transform = "none"; return;
+      }
+      n.style.opacity = "0";
+      n.style.transform = "translateY(22px)";
+      this._io.observe(n);
+    });
+  }
+
+  componentDidMount() { requestAnimationFrame(() => this.reveal()); }
+  componentDidUpdate(_p, prev) {
+    if (prev.page !== this.state.page) requestAnimationFrame(() => this.reveal());
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+
+  renderVals() {
+    const p = this.state.page;
+    return {
+      isHome: p === "home",
+      isO2L: p === "o2l",
+      isRR: p === "rr",
+      goHome: () => this.go("home"),
+      goO2L: () => this.go("o2l"),
+      goRR: () => this.go("rr"),
+      goNosotros: () => {
+        const jump = () => {
+          const el = document.getElementById("nosotros");
+          if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 92, behavior: "smooth" });
+        };
+        if (p === "home") jump();
+        else this.setState({ page: "home" }, () => requestAnimationFrame(() => { this.reveal(); jump(); }));
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

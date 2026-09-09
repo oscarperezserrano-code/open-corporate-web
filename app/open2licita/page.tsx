@@ -29,19 +29,26 @@ const features = [
     description:
       "El sistema identifica oportunidades relevantes para cada usuario y genera alertas e informes periódicos sin intervención manual, combinando reglas de negocio con análisis inteligente del contenido de las licitaciones.",
   },
+  {
+    title: "Asistente IA propio para consultas y ofertas",
+    description:
+      "Con un asistente IA propio, puedes consultar cualquier indicador en el formato deseado y obtener propuesta a tu oferta en base al análisis del histórico y de la situación actual de tu competencia.",
+  },
 ];
 
 const audience = [
   "Constructoras",
-  "Estudios de arquitectura",
-  "Contratistas",
-  "Consultoras de licitaciones",
+  "Ingenierías",
+  "Asociaciones",
+  "Estudios",
+  "Consultoras",
 ];
 
 export default function Open2LicitaPage() {
   return (
     <>
       <Hero
+        showMesh
         breadcrumb={{ label: "← Soluciones", href: "/#soluciones" }}
         eyebrow="Construcción · Licitaciones públicas"
         title="Encontrar y analizar licitaciones de construcción, sin el trabajo manual"
@@ -49,7 +56,7 @@ export default function Open2LicitaPage() {
           problem:
             "Hoy, seguir las licitaciones relevantes significa revisar a mano decenas de boletines dispersos.",
           solution:
-            "Open2Licita agrega, analiza y te alerta automáticamente sobre las oportunidades que importan para tu negocio.",
+            "Unifica la información de todos los organismos licitadores de construcción, la analiza y me facilita los datos relevantes que necesito en cada fase del proceso.",
         }}
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
       />

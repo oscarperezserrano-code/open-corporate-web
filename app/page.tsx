@@ -12,7 +12,7 @@ const reasons = [
   {
     title: "IA aplicada",
     description:
-      "Usamos inteligencia artificial para procesar documentación compleja y convertirla en información estructurada y accionable, no como una etiqueta de marketing.",
+      "Usamos inteligencia artificial para procesar documentación compleja y convertirla en información estructurada, no como una etiqueta de marketing, y para recibir propuestas que refuercen la toma de decisiones.",
   },
   {
     title: "Cumplimiento normativo",
@@ -27,7 +27,7 @@ export default function Home() {
       <Hero
         showMesh
         title="Software especializado para sectores de infraestructura y construcción"
-        subtitle="Diseñamos plataformas SaaS que digitalizan procesos críticos en sectores altamente regulados, combinando datos abiertos, inteligencia artificial y cumplimiento normativo."
+        subtitle="Diseñamos plataformas SaaS que digitalizan procesos críticos en sectores altamente regulados, combinando datos abiertos, inteligencia artificial y cumplimiento normativo para el sector de la construcción y el sector ferroviario."
         primaryCta={{ label: "Ver soluciones", href: "#soluciones" }}
         secondaryCta={{
           label: "Solicita una demo",
@@ -45,8 +45,9 @@ export default function Home() {
               Nuestras soluciones
             </h2>
             <p className="max-w-[42ch] text-[16.5px] leading-[1.6] text-muted">
-              Dos plataformas verticales, cada una construida sobre la
-              normativa y los datos de su sector.
+              Plataformas verticales construidas sobre el pilar básico de
+              cumplimiento de la normativa y de la fiabilidad de los datos
+              del sector.
             </p>
           </div>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(340px,1fr))] gap-6">

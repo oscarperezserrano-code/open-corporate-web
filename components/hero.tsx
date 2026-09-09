@@ -40,7 +40,7 @@ export function Hero({
               top: "-8%",
               right: "-14%",
               width: "min(1180px,105%)",
-              opacity: 0.72,
+              opacity: 0.85,
               filter: "saturate(1.15)",
             }}
           />
@@ -86,7 +86,7 @@ export function Hero({
           {title}
         </h1>
 
-        {subtitle && !problemSolution && (
+        {subtitle && (
           <p className="mt-[34px] max-w-[58ch] text-xl leading-[1.55] text-body">
             {subtitle}
           </p>

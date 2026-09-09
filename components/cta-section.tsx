@@ -21,7 +21,7 @@ export function CTASection({
             top: "-28%",
             right: "-6%",
             width: "min(720px,80%)",
-            opacity: 0.4,
+            opacity: 0.55,
           }}
         />
         <div className="relative grid gap-10 lg:grid-cols-2">

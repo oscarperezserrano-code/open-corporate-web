@@ -1,6 +1,6 @@
 export const company = {
   name: "OPENvarez",
-  legalName: "OPENvarez Software, S.L.",
+  legalName: "OPENvarez TechLab S.L.",
   taxId: "B00000000 (CIF a completar)",
   address: "Calle Ejemplo 123, 28001 Madrid, España",
   email: "info@openvarez.example",
@@ -30,7 +30,7 @@ export const products: Product[] = [
     name: "RiskRail402",
     sector: "Ferroviario y gestión de riesgos",
     tagline:
-      "Digitaliza el análisis de riesgo ferroviario conforme al Reglamento (UE) 402/2013, sin Excel ni Word.",
+      "Digitaliza el análisis de riesgos ferroviario conforme al Reglamento (UE) 402/2013, sin procesos manuales, proporcionando trazabilidad de medidas y responsabilidades.",
     href: "/riskrail402",
     image: "/screenshots/rr-dashboard.png",
   },

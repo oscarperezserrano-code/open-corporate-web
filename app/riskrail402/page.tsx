@@ -29,6 +29,11 @@ const features = [
     description:
       "Cada expediente queda blindado de principio a fin: quién hizo qué, cuándo y con qué justificación, con firma electrónica de proponente, expertos e instructor integrada en el propio flujo. El informe de auditoría se genera solo, listo para inspección regulatoria en cualquier momento.",
   },
+  {
+    title: "Asistente IA propio para riesgos y medidas",
+    description:
+      "Proporciona un asistente IA para proponer riesgos y medidas en base a los datos históricos.",
+  },
 ];
 
 const audience = [
@@ -42,9 +47,11 @@ export default function RiskRail402Page() {
   return (
     <>
       <Hero
+        showMesh
         breadcrumb={{ label: "← Soluciones", href: "/#soluciones" }}
         eyebrow="Ferroviario · Gestión de riesgos"
-        title="El análisis de riesgo ferroviario merece algo mejor que Excel y Word"
+        title="La plataforma que transforma el Análisis de Riesgos en una verdadera herramienta de trabajo en beneficio de la seguridad."
+        subtitle="Rompe la barrera existente al simplificar el procedimiento."
         problemSolution={{
           problem:
             "Hoy, el análisis de riesgo ante cambios ferroviarios según el Reglamento (UE) 402/2013 se gestiona con hojas de cálculo y documentos sueltos, sin trazabilidad ni control de versiones.",

@@ -6,10 +6,45 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { nav } from "@/lib/site-config";
+import { HomeNavbar } from "@/components/home/navbar-home";
 
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  if (pathname === "/") {
+    return <HomeNavbar />;
+  }
+
+  if (pathname === "/open2licita") {
+    return (
+      <HomeNavbar
+        links={[
+          { label: "Inicio", href: "/" },
+          { label: "Funciones", href: "#funciones" },
+          { label: "Cómo funciona", href: "#proceso" },
+        ]}
+        ctaLabel="Solicita una demo"
+        ctaHref="#demo"
+        logoHref="/"
+      />
+    );
+  }
+
+  if (pathname === "/riskrail402") {
+    return (
+      <HomeNavbar
+        links={[
+          { label: "Inicio", href: "/" },
+          { label: "Proceso", href: "#proceso" },
+          { label: "Normativa", href: "#normativa" },
+        ]}
+        ctaLabel="Solicita una demo"
+        ctaHref="#demo"
+        logoHref="/"
+      />
+    );
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-subtle bg-bg/78 backdrop-blur-[14px]">
@@ -20,7 +55,7 @@ export function Navbar() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/brand/mark.png"
+            src="/logos/logo-openvarez.png"
             alt=""
             width={44}
             height={44}

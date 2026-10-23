@@ -1,15 +1,29 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { company, nav } from "@/lib/site-config";
+import { HomeFooter } from "@/components/home/footer-home";
 
 export function Footer() {
+  const pathname = usePathname();
+
+  if (
+    pathname === "/" ||
+    pathname === "/open2licita" ||
+    pathname === "/riskrail402"
+  ) {
+    return <HomeFooter />;
+  }
+
   return (
     <footer className="border-t border-border-subtle bg-bg-alt">
       <div className="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-12 px-6 py-20">
         <div>
           <div className="flex items-center gap-3">
             <Image
-              src="/brand/mark.png"
+              src="/logos/logo-openvarez.png"
               alt=""
               width={40}
               height={40}

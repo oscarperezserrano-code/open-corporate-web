@@ -31,16 +31,16 @@ export function ContactForm({ product }: { product: string }) {
   }
 
   const inputClasses =
-    "w-full rounded-md border border-border bg-surface-deep px-4 py-2.5 text-sm text-ink placeholder:text-faint focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20";
+    "w-full rounded-md border border-[rgba(157,176,164,0.2)] bg-[#09100B] px-4 py-2.5 text-sm text-[#ECF3EE] placeholder:text-[#9DB0A4] focus:border-[#4ADE80] focus:outline-none focus:ring-2 focus:ring-[#4ADE80]/20";
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-xl border border-border bg-surface-deep/60 p-8"
+      className="rounded-xl border border-[rgba(157,176,164,0.2)] bg-[#09100B]/60 p-8"
     >
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="sm:col-span-1">
-          <label htmlFor="name" className="text-sm font-medium text-ink">
+          <label htmlFor="name" className="text-sm font-medium text-[#ECF3EE]">
             Nombre
           </label>
           <input
@@ -53,7 +53,7 @@ export function ContactForm({ product }: { product: string }) {
           />
         </div>
         <div className="sm:col-span-1">
-          <label htmlFor="email" className="text-sm font-medium text-ink">
+          <label htmlFor="email" className="text-sm font-medium text-[#ECF3EE]">
             Email
           </label>
           <input
@@ -66,7 +66,7 @@ export function ContactForm({ product }: { product: string }) {
           />
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor="company" className="text-sm font-medium text-ink">
+          <label htmlFor="company" className="text-sm font-medium text-[#ECF3EE]">
             Empresa
           </label>
           <input
@@ -79,7 +79,7 @@ export function ContactForm({ product }: { product: string }) {
           />
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor="message" className="text-sm font-medium text-ink">
+          <label htmlFor="message" className="text-sm font-medium text-[#ECF3EE]">
             Mensaje
           </label>
           <textarea
@@ -94,13 +94,13 @@ export function ContactForm({ product }: { product: string }) {
 
       <button
         type="submit"
-        className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-bold text-accent-ink transition-colors hover:bg-accent-hover sm:w-auto"
+        className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#ECF3EE] px-6 py-3 text-sm font-semibold text-[#030604] transition-colors hover:bg-[#4ADE80] sm:w-auto"
       >
         Solicita una demo
       </button>
 
       {sent && (
-        <p className="mt-4 text-sm text-muted">
+        <p className="mt-4 text-sm text-[#9DB0A4]">
           Se ha abierto tu cliente de correo con los datos rellenados.
           Confirma el envío para que recibamos tu solicitud.
         </p>

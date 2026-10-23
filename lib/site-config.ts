@@ -3,7 +3,7 @@ export const company = {
   legalName: "OPENvarez TechLab S.L.",
   taxId: "B00000000 (CIF a completar)",
   address: "Calle Ejemplo 123, 28001 Madrid, España",
-  email: "info@openvarez.example",
+  email: "info@openvarez.com",
 };
 
 export type Product = {

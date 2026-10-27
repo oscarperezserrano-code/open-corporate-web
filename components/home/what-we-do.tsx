@@ -5,7 +5,7 @@ const items = [
   },
   {
     title: "Inteligencia artificial aplicada",
-    text: "IA para leer, estructurar y redactar sobre grandes volúmenes de documentación, siempre con revisión y trazabilidad.",
+    text: "Usamos inteligencia artificial para convertir documentación compleja en información estructurada y para proponerte decisiones mejor fundamentadas. No es una etiqueta de marketing.",
   },
 ];
 

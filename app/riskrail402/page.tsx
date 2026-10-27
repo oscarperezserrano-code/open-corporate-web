@@ -41,9 +41,9 @@ const steps = [
 
 const audience = [
   "Operadores ferroviarios",
-  "Administradores de infraestructura",
-  "Gestores de seguridad",
-  "Entidades evaluadoras",
+  "Administradores de infraestructura (públicos y privados)",
+  "Entidades encargadas del mantenimiento",
+  "Propietarios de material rodante",
 ];
 
 function RailDecoration() {
@@ -148,7 +148,7 @@ export default function RiskRail402Page() {
         eyebrow="Ferroviario · Gestión de riesgos"
         title="RiskRail402."
         titleAccent="El análisis de riesgo, sin Excel ni Word."
-        paragraph="Plataforma digital guiada que blinda el análisis de riesgo ante cambios ferroviarios según el Reglamento (UE) 402/2013."
+        paragraph="La plataforma que convierte el análisis de riesgos en una herramienta de trabajo real, al servicio de la seguridad. Elimina las barreras del proceso al simplificarlo. Incluye un asistente de IA que propone riesgos y medidas a partir de datos históricos."
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
         secondaryCta={{ label: "Ver el proceso →", href: "#proceso" }}
         frameTitle="RiskRail402 · Expediente · [captura provisional]"

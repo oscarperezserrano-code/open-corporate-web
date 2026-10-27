@@ -49,9 +49,10 @@ const steps = [
 
 const audience = [
   "Constructoras",
-  "Estudios de arquitectura",
-  "Contratistas",
-  "Consultoras de licitaciones",
+  "Ingenierías",
+  "Asociaciones",
+  "Estudios",
+  "Consultoras",
 ];
 
 function CircuitDecoration() {
@@ -170,7 +171,7 @@ export default function Open2LicitaPage() {
         eyebrow="Construcción · Licitaciones públicas"
         title="Open2Licita."
         titleAccent="Todas las licitaciones, analizadas."
-        paragraph="Encontrar y analizar licitaciones de construcción es lento, manual y está disperso en múltiples boletines. Open2Licita agrega, analiza y alerta automáticamente."
+        paragraph="Unifica la información de todos los organismos licitadores de construcción y te entrega los datos relevantes en cada fase del proceso. Con su asistente de IA propio, consultas cualquier indicador en el formato que quieras y recibes una propuesta de oferta basada en el histórico y en la situación actual de tu competencia."
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
         secondaryCta={{ label: "Ver cómo funciona →", href: "#proceso" }}
         frameTitle="Open2Licita · Licitaciones · [captura provisional]"

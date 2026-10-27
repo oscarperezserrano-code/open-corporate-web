@@ -25,9 +25,9 @@ export function HeroHome() {
           </h1>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#9DB0A4]">
-            Ingeniería de software e IA aplicada a sectores regulados, con
-            herramientas que facilitan el trabajo de equipos técnicos y de
-            dirección.
+            Ingeniería de software e IA aplicada a los sectores de la
+            construcción y el ferroviario, con herramientas que facilitan el
+            trabajo de equipos técnicos y de dirección.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">

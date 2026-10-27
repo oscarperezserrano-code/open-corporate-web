@@ -12,7 +12,7 @@ const lines = [
     number: "02",
     kicker: "Ferrocarril",
     title: "Digitalización del ferrocarril",
-    text: "Procesos de seguridad y cumplimiento normativo del sector llevados a plataformas digitales, con trazabilidad completa.",
+    text: "Digitaliza el análisis de riesgos ferroviario conforme al Reglamento (UE) 402/2013, sin procesos manuales y con trazabilidad de medidas y responsabilidades.",
     href: "/riskrail402",
   },
 ];

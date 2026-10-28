@@ -13,6 +13,9 @@ export function ScrollHero({
   secondaryCta,
   frameTitle,
   src,
+  alt,
+  imageWidth,
+  imageHeight,
   bgDecoration,
   children,
 }: {
@@ -24,6 +27,9 @@ export function ScrollHero({
   secondaryCta: Cta;
   frameTitle: string;
   src?: string;
+  alt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   bgDecoration?: ReactNode;
   children?: ReactNode;
 }) {
@@ -174,9 +180,13 @@ export function ScrollHero({
               </span>
             </div>
             {src ? (
-              <div className="relative aspect-[16/9] w-full">
-                <Image src={src} alt={frameTitle} fill className="object-cover" />
-              </div>
+              <Image
+                src={src}
+                alt={alt ?? frameTitle}
+                width={imageWidth ?? 2880}
+                height={imageHeight ?? 1620}
+                className="block h-auto w-full"
+              />
             ) : (
               <div className="min-h-[460px] p-8">{children}</div>
             )}

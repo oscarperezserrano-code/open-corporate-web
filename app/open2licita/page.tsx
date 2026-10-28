@@ -104,66 +104,6 @@ function CircuitDecoration() {
   );
 }
 
-function FramePlaceholder() {
-  const rows = [0, 1, 2, 3, 4];
-  const greenCell: Record<number, number> = { 1: 2, 3: 0 };
-
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap gap-3">
-        <span className="rounded-full border border-[#4ADE80] px-4 py-1.5 text-xs font-medium text-[#4ADE80]">
-          Construcción
-        </span>
-        <span className="rounded-full border border-[rgba(157,176,164,0.3)] px-4 py-1.5 text-xs text-[#9DB0A4]">
-          [Filtro]
-        </span>
-        <span className="rounded-full border border-[rgba(157,176,164,0.3)] px-4 py-1.5 text-xs text-[#9DB0A4]">
-          [Filtro]
-        </span>
-        <span className="rounded-full border border-[rgba(157,176,164,0.3)] px-4 py-1.5 text-xs text-[#9DB0A4]">
-          [Filtro]
-        </span>
-      </div>
-
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <div className="rounded-xl border border-[rgba(157,176,164,0.2)] p-4">
-          <p className="text-2xl font-light text-[#ECF3EE]">[0.000]</p>
-          <p className="mt-1 text-xs text-[#9DB0A4]">Licitaciones activas</p>
-        </div>
-        <div className="rounded-xl border border-[rgba(157,176,164,0.2)] p-4">
-          <p className="text-2xl font-light text-[#ECF3EE]">[00]</p>
-          <p className="mt-1 text-xs text-[#9DB0A4]">Nuevas hoy</p>
-        </div>
-        <div className="rounded-xl border border-[rgba(157,176,164,0.2)] p-4">
-          <p className="text-2xl font-light text-[#ECF3EE]">[00]</p>
-          <p className="mt-1 text-xs text-[#9DB0A4]">Alertas para ti</p>
-        </div>
-      </div>
-
-      <div className="space-y-2">
-        {rows.map((row) => (
-          <div key={row} className="flex items-center gap-2">
-            {[0, 1, 2, 3].map((cell) => {
-              const isGreen = greenCell[row] === cell;
-              return (
-                <div
-                  key={cell}
-                  className={`h-3 rounded-full ${
-                    isGreen
-                      ? "bg-[#4ADE80]/60"
-                      : "flex-1 bg-[rgba(157,176,164,0.15)]"
-                  }`}
-                  style={isGreen ? { width: "60%" } : undefined}
-                />
-              );
-            })}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function Open2LicitaPage() {
   return (
     <>
@@ -174,11 +114,13 @@ export default function Open2LicitaPage() {
         paragraph="Unifica la información de todos los organismos licitadores de construcción y te entrega los datos relevantes en cada fase del proceso. Con su asistente de IA propio, consultas cualquier indicador en el formato que quieras y recibes una propuesta de oferta basada en el histórico y en la situación actual de tu competencia."
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
         secondaryCta={{ label: "Ver cómo funciona →", href: "#proceso" }}
-        frameTitle="Open2Licita · Licitaciones · [captura provisional]"
+        frameTitle="Open2Licita · Licitaciones"
+        src="/open2licita-licitaciones.png"
+        alt="Open2Licita: listado de licitaciones activas con presupuesto, organismo y fin de plazo"
+        imageWidth={2880}
+        imageHeight={1800}
         bgDecoration={<CircuitDecoration />}
-      >
-        <FramePlaceholder />
-      </ScrollHero>
+      />
 
       <FeatureCards
         id="funciones"

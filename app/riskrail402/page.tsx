@@ -19,8 +19,8 @@ const features = [
   },
   {
     number: "02",
-    title: "IA que redacta el primer borrador",
-    text: "A partir de un título y una breve descripción del cambio, el asistente genera el borrador técnico completo, listo para que el equipo experto lo revise y valide.",
+    title: "IA que redacta el primer análisis",
+    text: "A partir de un título y una breve descripción del cambio, el asistente genera el análisis técnico completo, listo para que el equipo experto lo revise y valide.",
   },
   {
     number: "03",
@@ -127,7 +127,7 @@ export default function RiskRail402Page() {
       <FeatureCards
         id="funciones"
         eyebrow="Funciones"
-        title="Del borrador a la firma, en un solo flujo."
+        title="De la identificación del cambio a la conformidad."
         features={features}
       />
 

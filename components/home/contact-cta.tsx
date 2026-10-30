@@ -6,7 +6,7 @@ export function ContactCta() {
     >
       <div className="mx-auto flex max-w-[1240px] flex-col items-center text-center">
         <h2 className="home-reveal max-w-3xl text-[clamp(32px,4.6vw,56px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
-          ¿Tienes un proceso complejo que digitalizar?
+          ¿Quieres ver nuestros productos en acción?
         </h2>
         <a
           href="mailto:info@openvarez.com"

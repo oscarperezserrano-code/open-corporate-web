@@ -4,14 +4,14 @@ const lines = [
   {
     number: "01",
     kicker: "Construcción",
-    title: "Análisis de licitaciones públicas",
+    title: "Open2Licita",
     text: "Localizar, leer y comparar licitaciones y adjudicaciones de obra con IA, a partir de datos abiertos.",
     href: "/open2licita",
   },
   {
     number: "02",
     kicker: "Ferrocarril",
-    title: "Digitalización del ferrocarril",
+    title: "RiskRail402",
     text: "Digitaliza el análisis de riesgos ferroviario conforme al Reglamento (UE) 402/2013, sin procesos manuales y con trazabilidad de medidas y responsabilidades.",
     href: "/riskrail402",
   },
@@ -53,7 +53,7 @@ export function BusinessLines() {
                   href={line.href}
                   className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#4ADE80] transition-colors hover:text-[#BBF7D0]"
                 >
-                  Conocer más →
+                  Ver producto →
                 </Link>
               </div>
             </div>

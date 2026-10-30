@@ -1,7 +1,7 @@
 const items = [
   {
-    title: "Desarrollo de software",
-    text: "Plataformas web diseñadas y construidas por un equipo con experiencia en sistemas críticos de transporte.",
+    title: "Producto propio",
+    text: "Plataformas SaaS que desarrollamos y mantenemos nosotros, con un equipo de experiencia en sistemas críticos de transporte.",
   },
   {
     title: "Inteligencia artificial aplicada",
@@ -16,7 +16,8 @@ export function WhatWeDo() {
         Qué hacemos
       </p>
       <h2 className="home-reveal mt-4 max-w-3xl text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
-        Convertimos procesos documentales y normativos en software fiable.
+        Construimos productos que convierten procesos documentales y
+        normativos en software fiable.
       </h2>
 
       <div className="mt-14 grid gap-10 md:grid-cols-2">

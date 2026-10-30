@@ -14,7 +14,7 @@ export function HeroHome() {
       <div className="relative z-10 mx-auto max-w-[1240px]">
         <div className="max-w-2xl">
           <span className="inline-flex items-center rounded-full border border-[#4ADE80] bg-black/20 px-4 py-2 font-mono text-[13px] uppercase tracking-[0.12em] text-[#ECF3EE]">
-            Software · Inteligencia artificial
+            Productos SaaS · Inteligencia artificial
           </span>
 
           <h1 className="mt-8 text-[clamp(40px,6.4vw,84px)] font-bold leading-[0.96] tracking-[-0.03em] text-[#ECF3EE]">
@@ -25,9 +25,8 @@ export function HeroHome() {
           </h1>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#9DB0A4]">
-            Ingeniería de software e IA aplicada a los sectores de la
-            construcción y el ferroviario, con herramientas que facilitan el
-            trabajo de equipos técnicos y de dirección.
+            Plataformas SaaS con IA para la construcción y el ferroviario, que
+            facilitan el trabajo de equipos técnicos y de dirección.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -35,13 +34,13 @@ export function HeroHome() {
               href="#lineas"
               className="rounded-full bg-[#ECF3EE] px-7 py-3.5 text-sm font-semibold text-[#030604] transition-colors hover:bg-[#4ADE80]"
             >
-              Ver líneas de negocio
+              Ver productos
             </Link>
             <Link
               href="#contacto"
               className="text-sm font-semibold text-[#ECF3EE] transition-colors hover:text-[#4ADE80]"
             >
-              Hablemos →
+              Solicita una demo →
             </Link>
           </div>
         </div>

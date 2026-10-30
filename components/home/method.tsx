@@ -16,8 +16,8 @@ const steps = [
   },
   {
     number: "04",
-    title: "Entregar",
-    text: "Software mantenible, documentado y listo para auditoría.",
+    title: "Evolucionar",
+    text: "Producto mantenido y documentado, que mejora con el feedback de los clientes y está listo para auditoría.",
   },
 ];
 
@@ -25,10 +25,10 @@ export function Method() {
   return (
     <section id="metodo" className="mx-auto max-w-[1240px] px-6 py-24">
       <p className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#9DB0A4]">
-        Cómo trabajamos
+        Cómo construimos
       </p>
       <h2 className="home-reveal mt-4 max-w-3xl text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
-        Del proceso real al software, en cuatro pasos.
+        Del proceso real a un producto fiable, en cuatro pasos.
       </h2>
 
       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

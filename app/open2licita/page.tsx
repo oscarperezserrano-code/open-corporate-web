@@ -133,14 +133,14 @@ export default function Open2LicitaPage() {
         eyebrow="Resultados"
         title="Más oportunidades vistas, menos horas buscando."
         big={{
-          label: "Tiempo de búsqueda y revisión de licitaciones",
-          number: "[XX]",
-          unit: "%",
-          note: "menos con la agregación y el análisis automáticos. [Dato provisional]",
+          label: "Licitaciones activas monitorizadas",
+          number: "3.400",
+          unit: "+",
+          note: "Licitaciones de obra abiertas, con actualización continua.",
         }}
         small={[
-          { label: "Fuentes de open data agregadas", number: "[XX]", unit: " fuentes" },
-          { label: "Expedientes analizados", number: "[X.XXX]", unit: "+" },
+          { label: "Fuentes de open data agregadas", number: "3", unit: " fuentes", note: "PLACSP, Contratos de Galicia (Xunta) y encargos de TRAGSA." },
+          { label: "Contratos adjudicados analizados", number: "14.000", unit: "+", note: "Histórico de adjudicaciones para detectar patrones." },
         ]}
       />
 

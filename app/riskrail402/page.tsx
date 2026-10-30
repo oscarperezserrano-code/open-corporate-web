@@ -30,13 +30,13 @@ const features = [
 ];
 
 const steps = [
-  { label: "Fase 1", title: "Evaluación preliminar", text: "[Descripción de la fase]" },
-  { label: "Fase 2", title: "[Nombre de la fase]", text: "[Descripción de la fase]" },
-  { label: "Fase 3", title: "[Nombre de la fase]", text: "[Descripción de la fase]" },
-  { label: "Fase 4", title: "[Nombre de la fase]", text: "[Descripción de la fase]" },
-  { label: "Fase 5", title: "[Nombre de la fase]", text: "[Descripción de la fase]" },
-  { label: "Fase 6", title: "[Nombre de la fase]", text: "[Descripción de la fase]" },
-  { label: "Fase 7", title: "Declaración final de conformidad", text: "[Descripción de la fase]" },
+  { label: "Fase 1", title: "Evaluación inicial", text: "Se decide si el cambio afecta a la seguridad y si es significativo, según los criterios del reglamento." },
+  { label: "Fase 2", title: "Definición del sistema", text: "Se describe qué cambia, sus límites, interfaces, entorno, medidas existentes e hipótesis de partida." },
+  { label: "Fase 3", title: "Registro de peligros", text: "Se identifican y registran los peligros que puede introducir el cambio, con su causa y su responsable." },
+  { label: "Fase 4", title: "Evaluación del riesgo", text: "Cada peligro se evalúa con un principio de aceptación y se determina si su riesgo es aceptable." },
+  { label: "Fase 5", title: "Medidas de control", text: "Se definen las medidas para los riesgos no aceptables y se evalúa el riesgo residual." },
+  { label: "Fase 6", title: "Evaluación independiente", text: "En cambios significativos, se registra la evaluación del organismo de evaluación independiente y sus conclusiones." },
+  { label: "Fase 7", title: "Declaración", text: "El proponente, los expertos y el instructor firman la declaración de seguridad y se cierra el expediente." },
 ];
 
 const audience = [
@@ -168,14 +168,15 @@ export default function RiskRail402Page() {
         eyebrow="Resultados"
         title="Lo que cambia al dejar las hojas de cálculo."
         big={{
-          label: "Tiempo de redacción del análisis",
-          number: "[XX]",
-          unit: "%",
-          note: "menos con el primer borrador generado por IA. [Dato provisional]",
+          label: "Normativa de referencia",
+          number: "402/2013",
+          unit: "",
+          note: "Reglamento de Ejecución (UE) 402/2013.",
+          minFontSize: 56,
         }}
         small={[
           { label: "Fases del proceso guiado", number: "7", unit: " fases" },
-          { label: "Decisiones con registro y firma", number: "[XX]", unit: "%" },
+          { label: "Roles de firma", number: "3", unit: " roles", note: "Proponente, expertos e instructor firman cada declaración." },
         ]}
       />
 

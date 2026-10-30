@@ -1,4 +1,5 @@
 type Kpi = { label: string; number: string; unit: string };
+type SmallKpi = Kpi & { note?: string };
 
 export function KpiCards({
   eyebrow,
@@ -8,8 +9,8 @@ export function KpiCards({
 }: {
   eyebrow: string;
   title: string;
-  big: Kpi & { note: string };
-  small: [Kpi, Kpi];
+  big: Kpi & { note: string; minFontSize?: number };
+  small: [SmallKpi, SmallKpi];
 }) {
   return (
     <section className="mx-auto max-w-[1240px] px-6 py-24">
@@ -31,7 +32,7 @@ export function KpiCards({
             <div>
               <p
                 className="font-light leading-none tracking-[-0.04em] text-[#ECF3EE]"
-                style={{ fontSize: "clamp(72px, 10vw, 140px)" }}
+                style={{ fontSize: `clamp(${big.minFontSize ?? 72}px, 10vw, 140px)` }}
               >
                 {big.number}
                 <span className="text-[#4ADE80]">{big.unit}</span>
@@ -55,6 +56,9 @@ export function KpiCards({
                   {kpi.number}
                   <span className="text-[#4ADE80]">{kpi.unit}</span>
                 </p>
+                {kpi.note && (
+                  <p className="mt-4 text-sm text-[#9DB0A4]">{kpi.note}</p>
+                )}
               </div>
             </div>
           ))}

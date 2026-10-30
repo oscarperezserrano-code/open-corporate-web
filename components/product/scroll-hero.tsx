@@ -52,7 +52,7 @@ export function ScrollHero({
           position: absolute;
           top: 96px;
           left: 50%;
-          width: min(760px, 92%);
+          width: min(1100px, 92%);
           text-align: center;
           z-index: 2;
           transform: translateX(-50%);
@@ -144,7 +144,7 @@ export function ScrollHero({
           <span className="inline-flex items-center rounded-full border border-[#4ADE80] bg-black/20 px-4 py-2 font-mono text-[13px] uppercase tracking-[0.12em] text-[#ECF3EE]">
             {eyebrow}
           </span>
-          <h1 className="mt-8 text-[clamp(40px,6vw,84px)] font-bold leading-[0.96] tracking-[-0.03em] text-[#ECF3EE]">
+          <h1 className="mt-8 text-[clamp(40px,4.4vw,64px)] font-bold leading-[0.96] tracking-[-0.03em] text-[#ECF3EE]">
             {title}{" "}
             <span className="bg-gradient-to-r from-[#4ADE80] to-[#BBF7D0] bg-clip-text text-transparent">
               {titleAccent}

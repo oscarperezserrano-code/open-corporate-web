@@ -108,10 +108,10 @@ export default function Open2LicitaPage() {
   return (
     <>
       <ScrollHero
-        eyebrow="Construcción · Licitaciones públicas"
-        title="Open2Licita."
-        titleAccent="Todas las licitaciones, analizadas."
-        paragraph="Unifica la información de todos los organismos licitadores de construcción y te entrega los datos relevantes en cada fase del proceso. Con su asistente de IA propio, consultas cualquier indicador en el formato que quieras y recibes una propuesta de oferta basada en el histórico y en la situación actual de tu competencia."
+        eyebrow="OPEN2LICITA · CONSTRUCCIÓN"
+        title=""
+        titleAccent="Todas las licitaciones de obra, analizadas para que decidas mejor."
+        paragraph="Plataforma SaaS con IA que unifica los organismos licitadores, te entrega los datos clave de cada fase y propone tu oferta a partir del histórico y de la competencia."
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
         secondaryCta={{ label: "Ver cómo funciona →", href: "#proceso" }}
         frameTitle="Open2Licita · Licitaciones"

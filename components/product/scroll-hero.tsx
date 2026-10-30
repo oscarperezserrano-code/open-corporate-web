@@ -1,8 +1,128 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import type { ReactNode } from "react";
+import { useRef, useState, type KeyboardEvent, type ReactNode } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Cta = { label: string; href: string };
+type Screen = { src: string; alt: string; width?: number; height?: number };
+
+function ScreenCarousel({
+  screens,
+  label,
+  defaultWidth,
+  defaultHeight,
+}: {
+  screens: Screen[];
+  label: string;
+  defaultWidth: number;
+  defaultHeight: number;
+}) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+  const last = screens.length - 1;
+
+  function go(index: number) {
+    const track = trackRef.current;
+    if (!track) return;
+    const target = Math.max(0, Math.min(last, index));
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    track.scrollTo({
+      left: target * track.clientWidth,
+      behavior: reduced ? "auto" : "smooth",
+    });
+  }
+
+  function handleScroll() {
+    const track = trackRef.current;
+    if (!track || track.clientWidth === 0) return;
+    setActive(Math.round(track.scrollLeft / track.clientWidth));
+  }
+
+  function handleKeyDown(e: KeyboardEvent<HTMLDivElement>) {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      go(active + 1);
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      go(active - 1);
+    }
+  }
+
+  const arrowClass =
+    "absolute top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[rgba(157,176,164,0.3)] bg-[#030604]/70 text-[#ECF3EE] backdrop-blur transition-colors hover:border-[#4ADE80] hover:text-[#4ADE80] focus-visible:outline-2 focus-visible:outline-[#4ADE80] disabled:pointer-events-none disabled:opacity-0";
+
+  return (
+    <div
+      className="relative"
+      role="region"
+      aria-roledescription="carrusel"
+      aria-label={label}
+    >
+      <div
+        ref={trackRef}
+        tabIndex={0}
+        onScroll={handleScroll}
+        onKeyDown={handleKeyDown}
+        className="ph-track flex snap-x snap-mandatory overflow-x-auto focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#4ADE80]"
+      >
+        {screens.map((screen, i) => (
+          <div
+            key={screen.src}
+            className="w-full shrink-0 snap-start"
+            role="group"
+            aria-roledescription="pantalla"
+            aria-label={`${i + 1} de ${screens.length}`}
+          >
+            <Image
+              src={screen.src}
+              alt={screen.alt}
+              width={screen.width ?? defaultWidth}
+              height={screen.height ?? defaultHeight}
+              className="block h-auto w-full"
+              draggable={false}
+            />
+          </div>
+        ))}
+      </div>
+
+      <button
+        type="button"
+        onClick={() => go(active - 1)}
+        disabled={active === 0}
+        aria-label="Pantalla anterior"
+        className={`${arrowClass} left-3`}
+      >
+        <ChevronLeft size={20} aria-hidden="true" />
+      </button>
+      <button
+        type="button"
+        onClick={() => go(active + 1)}
+        disabled={active === last}
+        aria-label="Pantalla siguiente"
+        className={`${arrowClass} right-3`}
+      >
+        <ChevronRight size={20} aria-hidden="true" />
+      </button>
+
+      <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full bg-[#030604]/70 px-3 py-2 backdrop-blur">
+        {screens.map((screen, i) => (
+          <button
+            key={screen.src}
+            type="button"
+            onClick={() => go(i)}
+            aria-label={`Ir a la pantalla ${i + 1}`}
+            aria-current={i === active ? "true" : undefined}
+            className={`h-2 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4ADE80] ${
+              i === active ? "w-5 bg-[#4ADE80]" : "w-2 bg-[rgba(236,243,238,0.45)] hover:bg-[#ECF3EE]"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function ScrollHero({
   eyebrow,
@@ -16,6 +136,7 @@ export function ScrollHero({
   alt,
   imageWidth,
   imageHeight,
+  screens,
   bgDecoration,
   children,
 }: {
@@ -30,6 +151,7 @@ export function ScrollHero({
   alt?: string;
   imageWidth?: number;
   imageHeight?: number;
+  screens?: Screen[];
   bgDecoration?: ReactNode;
   children?: ReactNode;
 }) {
@@ -39,6 +161,8 @@ export function ScrollHero({
         .ph-heroscroll {
           height: 2100px;
         }
+        .ph-track { scrollbar-width: none; }
+        .ph-track::-webkit-scrollbar { display: none; }
         .ph-stage {
           position: sticky;
           top: 0;
@@ -179,7 +303,22 @@ export function ScrollHero({
                 {frameTitle}
               </span>
             </div>
-            {src ? (
+            {screens && screens.length > 1 ? (
+              <ScreenCarousel
+                screens={screens.slice(0, 3)}
+                label={frameTitle}
+                defaultWidth={imageWidth ?? 2880}
+                defaultHeight={imageHeight ?? 1620}
+              />
+            ) : screens && screens.length === 1 ? (
+              <Image
+                src={screens[0].src}
+                alt={screens[0].alt}
+                width={screens[0].width ?? imageWidth ?? 2880}
+                height={screens[0].height ?? imageHeight ?? 1620}
+                className="block h-auto w-full"
+              />
+            ) : src ? (
               <Image
                 src={src}
                 alt={alt ?? frameTitle}

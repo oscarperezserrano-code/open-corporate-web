@@ -90,57 +90,6 @@ function RailDecoration() {
   );
 }
 
-function FramePlaceholder() {
-  return (
-    <div className="flex flex-col gap-6 sm:flex-row">
-      <div className="flex shrink-0 flex-row gap-1 overflow-x-auto border-b border-[rgba(157,176,164,0.15)] pb-3 sm:w-[190px] sm:flex-col sm:border-b-0 sm:border-r sm:pb-0 sm:pr-4">
-        {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-          <div
-            key={n}
-            className={`shrink-0 whitespace-nowrap rounded-md px-3 py-2 text-xs font-medium ${
-              n === 1 ? "bg-[#4ADE80]/15 text-[#4ADE80]" : "text-[#9DB0A4]"
-            }`}
-          >
-            Fase {n}
-          </div>
-        ))}
-      </div>
-
-      <div className="flex-1 space-y-6">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <div className="rounded-xl border border-[rgba(157,176,164,0.2)] p-4">
-            <p className="text-2xl font-light text-[#ECF3EE]">7</p>
-            <p className="mt-1 text-xs text-[#9DB0A4]">Fases</p>
-          </div>
-          <div className="rounded-xl border border-[rgba(157,176,164,0.2)] p-4">
-            <p className="text-2xl font-light text-[#ECF3EE]">[00]</p>
-            <p className="mt-1 text-xs text-[#9DB0A4]">Peligros identificados</p>
-          </div>
-          <div className="rounded-xl border border-[rgba(157,176,164,0.2)] p-4">
-            <p className="text-2xl font-light text-[#ECF3EE]">[00]</p>
-            <p className="mt-1 text-xs text-[#9DB0A4]">Medidas de control</p>
-          </div>
-        </div>
-
-        <div className="space-y-2">
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className="h-3 rounded-full bg-[rgba(157,176,164,0.15)]"
-              style={{ width: `${80 - i * 12}%` }}
-            />
-          ))}
-        </div>
-        <div className="space-y-2">
-          {[0, 1, 2, 3].map((i) => (
-            <div key={i} className="h-3 rounded-full bg-[rgba(157,176,164,0.12)]" />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function RiskRail402Page() {
   return (
     <>
@@ -151,11 +100,29 @@ export default function RiskRail402Page() {
         paragraph="Plataforma SaaS con IA que guía el análisis conforme al Reglamento (UE) 402/2013, propone riesgos y medidas a partir de datos históricos y deja trazabilidad completa."
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
         secondaryCta={{ label: "Ver el proceso →", href: "#proceso" }}
-        frameTitle="RiskRail402 · Expediente · [captura provisional]"
+        frameTitle="RiskRail402 · Expediente"
+        screens={[
+          {
+            src: "/riskrail402/riskrail402-pantalla-1-analisis.png",
+            alt: "RiskRail402: listado de análisis con estado, progreso por fases y peligros controlados",
+            width: 2880,
+            height: 1558,
+          },
+          {
+            src: "/riskrail402/riskrail402-pantalla-2-fase.png",
+            alt: "RiskRail402: formulario de la fase 1, Evaluación inicial, con el estepero de las 7 fases",
+            width: 2880,
+            height: 1558,
+          },
+          {
+            src: "/riskrail402/riskrail402-pantalla-3-dashboard.png",
+            alt: "RiskRail402: dashboard con análisis por estado, estado de peligros, peligros por nivel de riesgo y medidas de control",
+            width: 2880,
+            height: 1558,
+          },
+        ]}
         bgDecoration={<RailDecoration />}
-      >
-        <FramePlaceholder />
-      </ScrollHero>
+      />
 
       <FeatureCards
         id="funciones"

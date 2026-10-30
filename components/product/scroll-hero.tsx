@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useRef, useState, type KeyboardEvent, type ReactNode } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+  type ReactNode,
+} from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Cta = { label: string; href: string };
@@ -155,6 +161,44 @@ export function ScrollHero({
   bgDecoration?: ReactNode;
   children?: ReactNode;
 }) {
+  const stageRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<HTMLDivElement>(null);
+
+  // At max zoom the frame must fit between the navbar and the bottom of the
+  // visible stage, with a 24px margin each side. That depends on the frame's
+  // real height (title bar + image at its natural ratio), so it's measured
+  // here and handed to the zoom keyframe as CSS variables.
+  useEffect(() => {
+    const stage = stageRef.current;
+    const frame = frameRef.current;
+    if (!stage || !frame) return;
+
+    const MAX_SCALE = 1.12;
+    const MARGIN = 24;
+
+    function fit() {
+      if (!stage || !frame) return;
+      const frameHeight = frame.offsetHeight;
+      if (frameHeight === 0) return;
+      const navHeight = document.querySelector("header")?.getBoundingClientRect().height ?? 0;
+      const visibleBottom = Math.min(window.innerHeight, stage.offsetHeight);
+      const available = visibleBottom - navHeight - MARGIN * 2;
+      const scale = Math.min(MAX_SCALE, available / frameHeight);
+      const finalTop = navHeight + (visibleBottom - navHeight - scale * frameHeight) / 2;
+      frame.style.setProperty("--fr-scale-end", scale.toFixed(4));
+      frame.style.setProperty("--fr-ty-end", `${(finalTop - frame.offsetTop).toFixed(1)}px`);
+    }
+
+    fit();
+    const observer = new ResizeObserver(fit);
+    observer.observe(frame);
+    window.addEventListener("resize", fit);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", fit);
+    };
+  }, []);
+
   return (
     <section className="ph-heroscroll relative">
       <style>{`
@@ -212,7 +256,7 @@ export function ScrollHero({
         }
         @keyframes ph-fr-anim {
           from { transform: translateX(-50%) translateY(0) scale(0.8); }
-          to { transform: translateX(-50%) translateY(-470px) scale(1.12); }
+          to { transform: translateX(-50%) translateY(var(--fr-ty-end, -470px)) scale(var(--fr-scale-end, 1.12)); }
         }
 
         @media (prefers-reduced-motion: reduce), (max-width: 767px) {
@@ -253,7 +297,7 @@ export function ScrollHero({
         }
       `}</style>
 
-      <div className="ph-stage">
+      <div ref={stageRef} className="ph-stage">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -293,7 +337,7 @@ export function ScrollHero({
           </div>
         </div>
 
-        <div className="ph-fr">
+        <div ref={frameRef} className="ph-fr">
           <div className="overflow-hidden rounded-[20px] border border-[rgba(157,176,164,0.25)] bg-[#09100B] shadow-[0_40px_120px_-30px_rgba(34,197,94,0.35)]">
             <div className="flex h-[42px] items-center gap-2 border-b border-[rgba(157,176,164,0.2)] bg-black/30 px-4">
               <span className="h-2.5 w-2.5 rounded-full bg-[rgba(157,176,164,0.3)]" />

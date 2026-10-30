@@ -38,7 +38,7 @@ export function HomeNavbar({
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/logo-openvarez-nav.png"
+            src="/logo-openvarez.svg"
             alt="OPENvarez Tech Lab"
             width={259}
             height={46}

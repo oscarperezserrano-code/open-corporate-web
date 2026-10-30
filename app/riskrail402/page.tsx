@@ -97,7 +97,7 @@ export default function RiskRail402Page() {
         eyebrow="RISKRAIL402 · FERROVIARIO"
         title=""
         titleAccent="La seguridad en el ferrocarril empieza con el análisis de riesgos."
-        paragraph="Plataforma SaaS con IA que guía el análisis conforme al Reglamento (UE) 402/2013, propone riesgos y medidas a partir de datos históricos y deja trazabilidad completa."
+        paragraph="Plataforma SaaS con IA que guía el análisis conforme al Reglamento (UE) 402/2013 para todos los actores ferroviarios, propone riesgos y medidas a partir de datos históricos y deja trazabilidad completa."
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
         secondaryCta={{ label: "Ver el proceso →", href: "#proceso" }}
         frameTitle="RiskRail402 · Expediente"

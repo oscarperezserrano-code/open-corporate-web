@@ -14,7 +14,7 @@ export function FeatureCards({
       <p className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#9DB0A4]">
         {eyebrow}
       </p>
-      <h2 className="home-reveal mt-4 max-w-3xl text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
+      <h2 className="home-reveal mt-4 text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
         {title}
       </h2>
 

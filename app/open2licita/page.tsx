@@ -155,14 +155,14 @@ export default function Open2LicitaPage() {
         <p className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#9DB0A4]">
           Para quién
         </p>
-        <h2 className="home-reveal mt-4 max-w-3xl text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
+        <h2 className="home-reveal mt-4 text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
           Pensado para quien vive de las licitaciones.
         </h2>
-        <div className="home-reveal mt-10 flex flex-wrap gap-3">
+        <div className="home-reveal mt-10 flex flex-wrap gap-3 lg:gap-2">
           {audience.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-[#4ADE80] px-5 py-2.5 text-sm font-medium text-[#ECF3EE]"
+              className="rounded-full border border-[#4ADE80] px-5 py-2.5 text-sm font-medium text-[#ECF3EE] lg:px-4"
             >
               {item}
             </span>

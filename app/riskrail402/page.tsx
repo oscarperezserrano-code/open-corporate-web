@@ -103,6 +103,12 @@ export default function RiskRail402Page() {
         frameTitle="RiskRail402 · Expediente"
         screens={[
           {
+            src: "/riskrail402/riskrail402-pantalla-3-dashboard.png",
+            alt: "RiskRail402: dashboard con análisis por estado, estado de peligros, peligros por nivel de riesgo y medidas de control",
+            width: 2880,
+            height: 1558,
+          },
+          {
             src: "/riskrail402/riskrail402-pantalla-1-analisis.png",
             alt: "RiskRail402: listado de análisis con estado, progreso por fases y peligros controlados",
             width: 2880,
@@ -111,12 +117,6 @@ export default function RiskRail402Page() {
           {
             src: "/riskrail402/riskrail402-pantalla-2-fase.png",
             alt: "RiskRail402: formulario de la fase 1, Evaluación inicial, con el estepero de las 7 fases",
-            width: 2880,
-            height: 1558,
-          },
-          {
-            src: "/riskrail402/riskrail402-pantalla-3-dashboard.png",
-            alt: "RiskRail402: dashboard con análisis por estado, estado de peligros, peligros por nivel de riesgo y medidas de control",
             width: 2880,
             height: 1558,
           },

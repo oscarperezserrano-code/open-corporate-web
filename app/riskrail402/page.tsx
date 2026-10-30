@@ -159,7 +159,7 @@ export default function RiskRail402Page() {
           Cumplimiento normativo
         </p>
         <h2 className="home-reveal mt-4 text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
-          Construido sobre el Reglamento (UE) 402/2013.
+          La cultura de seguridad se vuelve método.
         </h2>
         <p className="home-reveal mt-6 max-w-[62ch] text-lg leading-relaxed text-[#9DB0A4]">
           El flujo de RiskRail402 sigue el método común de seguridad para la

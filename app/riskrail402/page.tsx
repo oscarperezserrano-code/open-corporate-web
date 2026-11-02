@@ -96,7 +96,7 @@ export default function RiskRail402Page() {
       <ScrollHero
         eyebrow="RISKRAIL402 · FERROVIARIO"
         title=""
-        titleAccent="La seguridad en el ferrocarril empieza con el análisis de riesgos."
+        titleAccent="La cultura de seguridad ferroviaria empieza con el análisis de riesgos."
         paragraph="Plataforma SaaS con IA que guía el análisis conforme al Reglamento (UE) 402/2013 para todos los actores ferroviarios, propone riesgos y medidas a partir de datos históricos y deja trazabilidad completa."
         primaryCta={{ label: "Solicita una demo", href: "#demo" }}
         secondaryCta={{ label: "Ver el proceso →", href: "#proceso" }}
@@ -159,13 +159,13 @@ export default function RiskRail402Page() {
           Cumplimiento normativo
         </p>
         <h2 className="home-reveal mt-4 text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
-          La cultura de seguridad se vuelve método.
+          Cumplir la norma es consecuencia de pensar en la seguridad.
         </h2>
         <p className="home-reveal mt-6 max-w-[62ch] text-lg leading-relaxed text-[#9DB0A4]">
           El flujo de RiskRail402 sigue el método común de seguridad para la
           evaluación y valoración del riesgo establecido en el Reglamento de
           Ejecución (UE) 402/2013, de modo que cada fase queda documentada y
-          lista para inspección.
+          trazable.
         </p>
         <div className="home-reveal mt-10 flex flex-wrap gap-3 lg:gap-2">
           {audience.map((item) => (

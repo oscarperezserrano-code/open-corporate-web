@@ -8,13 +8,13 @@ const ideas = [
   },
   {
     icon: User,
-    title: "IA con revisión experta",
-    text: "La IA propone; el equipo experto valida.",
+    title: "La IA propone, tú decides",
+    text: "La IA propone; la decisión y la validación son siempre de la persona.",
   },
   {
     icon: List,
-    title: "Trazabilidad completa",
-    text: "Cada decisión queda registrada y lista para auditoría.",
+    title: "Hecho para sectores regulados",
+    text: "Diseñado en torno a la normativa y a los procesos reales de cada sector.",
   },
 ];
 

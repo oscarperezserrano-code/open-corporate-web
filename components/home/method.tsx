@@ -12,12 +12,12 @@ const steps = [
   {
     number: "03",
     title: "Aplicar IA",
-    text: "Con revisión experta y registro de cada decisión.",
+    text: "La IA propone y la persona decide, con la información clara y a su alcance.",
   },
   {
     number: "04",
     title: "Evolucionar",
-    text: "Producto mantenido y documentado, que mejora con el feedback de los clientes y está listo para auditoría.",
+    text: "Producto mantenido y documentado, que mejora con el feedback de los clientes.",
   },
 ];
 

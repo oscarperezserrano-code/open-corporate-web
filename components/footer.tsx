@@ -12,7 +12,9 @@ export function Footer() {
   if (
     pathname === "/" ||
     pathname === "/open2licita" ||
-    pathname === "/riskrail402"
+    pathname === "/riskrail402" ||
+    pathname === "/aviso-legal" ||
+    pathname === "/privacidad"
   ) {
     return <HomeFooter />;
   }

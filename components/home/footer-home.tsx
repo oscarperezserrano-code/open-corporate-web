@@ -21,13 +21,13 @@ export function HomeFooter() {
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href="#"
+              href="/aviso-legal"
               className="text-sm text-[#9DB0A4] transition-colors hover:text-[#4ADE80]"
             >
               Aviso legal
             </Link>
             <Link
-              href="#"
+              href="/privacidad"
               className="text-sm text-[#9DB0A4] transition-colors hover:text-[#4ADE80]"
             >
               Privacidad

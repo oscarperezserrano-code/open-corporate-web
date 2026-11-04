@@ -16,6 +16,20 @@ export function Navbar() {
     return <HomeNavbar />;
   }
 
+  if (pathname === "/aviso-legal" || pathname === "/privacidad") {
+    return (
+      <HomeNavbar
+        links={[
+          { label: "Líneas de negocio", href: "/#lineas" },
+          { label: "Qué hacemos", href: "/#que-hacemos" },
+          { label: "Cómo trabajamos", href: "/#metodo" },
+        ]}
+        ctaHref="/#contacto"
+        logoHref="/"
+      />
+    );
+  }
+
   if (pathname === "/open2licita") {
     return (
       <HomeNavbar

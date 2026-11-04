@@ -25,7 +25,7 @@ export function HeroHome() {
           </h1>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#9DB0A4]">
-            Plataformas SaaS con IA para la construcción y el ferroviario, que
+            Plataformas SaaS con IA para la construcción y el ferrocarril, que
             facilitan el trabajo de equipos técnicos y de dirección.
           </p>
 

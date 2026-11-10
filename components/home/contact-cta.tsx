@@ -14,7 +14,7 @@ export function ContactCta() {
           href="mailto:info@openvarez.com"
           className={`mt-10 ${pillButtonClass}`}
         >
-          Solicita una demo →
+          Solicita una demo
         </a>
       </div>
     </section>

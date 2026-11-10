@@ -6,12 +6,8 @@ export const pillButtonClass =
 export function BusinessLines() {
   return (
     <section id="lineas" className="mx-auto max-w-[1240px] px-6 py-24">
-      <h2 className="home-reveal max-w-3xl text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
-        Aplicaciones específicas, empezando por la seguridad ferroviaria.
-      </h2>
-      <p className="home-reveal mt-6 max-w-3xl text-lg leading-relaxed text-[#9DB0A4]">
-        RiskRail402 da respuesta al análisis de riesgos del Reglamento (UE)
-        402/2013 para todos los actores ferroviarios.
+      <p className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#9DB0A4]">
+        Nuestra primera aplicación
       </p>
 
       <div className="home-reveal mt-10">

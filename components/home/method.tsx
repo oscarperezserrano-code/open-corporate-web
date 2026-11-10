@@ -2,22 +2,22 @@ const steps = [
   {
     number: "01",
     title: "Entender",
-    text: "Partimos del proceso real y de la normativa que lo regula.",
+    text: "Conocemos el ferrocarril y su entorno. Por eso entendemos los problemas reales desde el primer día.",
   },
   {
     number: "02",
     title: "Diseñar",
-    text: "Definimos el flujo, los datos y los controles necesarios.",
+    text: "Diseñamos todo para el ferrocarril y su casuística: flujos, datos y controles a medida del sector.",
   },
   {
     number: "03",
     title: "Aplicar IA",
-    text: "La IA propone y la persona decide, con la información clara y a su alcance.",
+    text: "IA orientada al ferrocarril para resolver problemas reales. Propone la IA, decide la persona.",
   },
   {
     number: "04",
     title: "Evolucionar",
-    text: "Producto mantenido y documentado, que mejora con el feedback de los clientes.",
+    text: "Producto en continua evolución, como el ferrocarril. Mantenido, documentado y mejorado con el feedback de los clientes.",
   },
 ];
 
@@ -28,7 +28,7 @@ export function Method() {
         Cómo construimos
       </p>
       <h2 className="home-reveal mt-4 max-w-3xl text-[clamp(28px,3.6vw,44px)] font-bold tracking-[-0.02em] text-[#ECF3EE]">
-        Del proceso real a un producto fiable, en cuatro pasos.
+        Del problema real del ferrocarril a un producto fiable, en cuatro pasos.
       </h2>
 
       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

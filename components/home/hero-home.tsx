@@ -18,19 +18,19 @@ export function HeroHome() {
           </span>
 
           <h1 className="mt-8 text-[clamp(40px,6.4vw,84px)] font-bold leading-[0.96] tracking-[-0.03em] text-[#ECF3EE]">
-            Soluciones de software e IA{" "}
+            Soluciones de Software e IA{" "}
             <span className="bg-gradient-to-r from-[#4ADE80] to-[#BBF7D0] bg-clip-text text-transparent">
-              para el ferrocarril.
+              para el Ferrocarril.
             </span>
           </h1>
 
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#9DB0A4]">
+          <p className="mt-8 max-w-[18rem] text-lg leading-relaxed text-[#9DB0A4] sm:max-w-[40rem]">
             Somos{" "}
             <span className="bg-gradient-to-r from-[#4ADE80] to-[#BBF7D0] bg-clip-text text-transparent">
               expertos en ferrocarril
             </span>
             . Digitalizamos los procesos de control y gestión para que operar,
-            decidir y cumplir sea más simple, más seguro y más rápido.
+            decidir y controlar sea más simple, más seguro y más rápido.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">

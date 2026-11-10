@@ -25,9 +25,12 @@ export function HeroHome() {
           </h1>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#9DB0A4]">
-            OPENvarez desarrolla software para el sector ferroviario. Nuestra
-            primera aplicación, RiskRail402, digitaliza el análisis de riesgos
-            conforme al Reglamento (UE) 402/2013.
+            Somos{" "}
+            <span className="bg-gradient-to-r from-[#4ADE80] to-[#BBF7D0] bg-clip-text text-transparent">
+              expertos en ferrocarril
+            </span>
+            . Digitalizamos los procesos de control y gestión para que operar,
+            decidir y cumplir sea más simple, más seguro y más rápido.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">

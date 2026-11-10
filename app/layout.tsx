@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${company.name} — Software e IA para el ferrocarril`,
+    default: `${company.name} — Soluciones de software e IA para el ferrocarril`,
     template: `%s — ${company.name}`,
   },
   description:

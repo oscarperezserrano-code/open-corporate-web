@@ -18,7 +18,7 @@ export function HeroHome() {
           </span>
 
           <h1 className="mt-8 text-[clamp(40px,6.4vw,84px)] font-bold leading-[0.96] tracking-[-0.03em] text-[#ECF3EE]">
-            Software e IA{" "}
+            Soluciones de software e IA{" "}
             <span className="bg-gradient-to-r from-[#4ADE80] to-[#BBF7D0] bg-clip-text text-transparent">
               para el ferrocarril.
             </span>

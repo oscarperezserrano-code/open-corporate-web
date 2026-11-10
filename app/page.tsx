@@ -8,7 +8,7 @@ import { Method } from "@/components/home/method";
 import { ContactCta } from "@/components/home/contact-cta";
 
 export const metadata: Metadata = {
-  title: { absolute: "OPENvarez — Software e IA para el ferrocarril" },
+  title: { absolute: "OPENvarez — Soluciones de software e IA para el ferrocarril" },
   description:
     "Plataformas SaaS con IA para la digitalización del ferrocarril.",
 };

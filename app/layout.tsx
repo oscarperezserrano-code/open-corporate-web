@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s — ${company.name}`,
   },
   description:
-    "Desarrollamos software especializado para sectores de infraestructura, combinando datos abiertos, inteligencia artificial y cumplimiento normativo.",
+    "Desarrollamos software especializado para el sector ferroviario, combinando inteligencia artificial y cumplimiento normativo.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

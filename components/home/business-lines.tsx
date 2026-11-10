@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+export const pillButtonClass =
+  "rounded-full bg-[#ECF3EE] px-7 py-3.5 text-sm font-semibold text-[#030604] transition-colors hover:bg-[#4ADE80]";
+
 export function BusinessLines() {
   return (
     <section id="lineas" className="mx-auto max-w-[1240px] px-6 py-24">
@@ -26,7 +29,7 @@ export function BusinessLines() {
             <div className="mt-7 flex flex-wrap items-center gap-6">
               <Link
                 href="/riskrail402"
-                className="rounded-full bg-[#ECF3EE] px-7 py-3.5 text-sm font-semibold text-[#030604] transition-colors hover:bg-[#4ADE80]"
+                className={pillButtonClass}
               >
                 Ver RiskRail402
               </Link>

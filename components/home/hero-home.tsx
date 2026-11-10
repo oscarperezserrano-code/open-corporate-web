@@ -14,27 +14,28 @@ export function HeroHome() {
       <div className="relative z-10 mx-auto max-w-[1240px]">
         <div className="max-w-2xl">
           <span className="inline-flex items-center rounded-full border border-[#4ADE80] bg-black/20 px-4 py-2 font-mono text-[13px] uppercase tracking-[0.12em] text-[#ECF3EE]">
-            Productos SaaS · Inteligencia artificial
+            Software ferroviario · Inteligencia artificial
           </span>
 
           <h1 className="mt-8 text-[clamp(40px,6.4vw,84px)] font-bold leading-[0.96] tracking-[-0.03em] text-[#ECF3EE]">
-            Software e IA que{" "}
+            Software e IA{" "}
             <span className="bg-gradient-to-r from-[#4ADE80] to-[#BBF7D0] bg-clip-text text-transparent">
-              resuelven problemas reales.
+              para el ferrocarril.
             </span>
           </h1>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#9DB0A4]">
-            Plataformas SaaS con IA para la construcción y el ferrocarril, que
-            facilitan el trabajo de equipos técnicos y de dirección.
+            OPENvarez desarrolla software para el sector ferroviario. Nuestra
+            primera aplicación, RiskRail402, digitaliza el análisis de riesgos
+            conforme al Reglamento (UE) 402/2013.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">
             <Link
-              href="#lineas"
+              href="/riskrail402"
               className="rounded-full bg-[#ECF3EE] px-7 py-3.5 text-sm font-semibold text-[#030604] transition-colors hover:bg-[#4ADE80]"
             >
-              Ver productos
+              Ver RiskRail402
             </Link>
             <Link
               href="#contacto"

@@ -92,7 +92,7 @@ body {
 
 /* =========================================================================
    Shared motion effects for the dark redesign (components/home/* and
-   components/product/*, used on /, /open2licita and /riskrail402).
+   components/product/*, used on / and /riskrail402).
    Scoped by class name — harmless wherever .home-reveal / .home-card-hover
    aren't applied.
    ========================================================================= */
@@ -141,7 +141,7 @@ body {
 }
 
 /* Sitewide per request (item 3.3) — smooth cross-fade between page
-   navigations. Pending verification on /open2licita and /riskrail402. */
+   navigations. Pending verification on /riskrail402. */
 @view-transition {
   navigation: auto;
 }

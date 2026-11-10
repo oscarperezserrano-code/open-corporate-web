@@ -11,7 +11,6 @@ export function Footer() {
 
   if (
     pathname === "/" ||
-    pathname === "/open2licita" ||
     pathname === "/riskrail402" ||
     pathname === "/aviso-legal" ||
     pathname === "/privacidad"
@@ -37,8 +36,7 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-5 max-w-[30ch] text-[15px] leading-relaxed text-dim">
-            Software especializado para sectores de infraestructura y
-            construcción.
+            Software especializado para el sector ferroviario.
           </p>
         </div>
 

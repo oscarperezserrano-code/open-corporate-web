@@ -38,8 +38,7 @@ export default function AvisoLegalPage() {
         <h2 className={h2}>2. Objeto</h2>
         <p className={p}>
           Este sitio web ofrece información sobre los servicios y productos de
-          OPENVAREZ TECHLAB, S.L., en particular las plataformas Open2Licita y
-          RiskRail402.
+          OPENVAREZ TECHLAB, S.L., en particular la plataforma RiskRail402.
         </p>
 
         <h2 className={h2}>3. Condiciones de uso</h2>

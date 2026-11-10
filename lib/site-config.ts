@@ -17,15 +17,6 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    slug: "open2licita",
-    name: "Open2Licita",
-    sector: "Construcción y licitaciones públicas",
-    tagline:
-      "Agrega, analiza y te alerta sobre licitaciones de construcción en toda España, automáticamente.",
-    href: "/open2licita",
-    image: "/screenshots/o2l-panel.png",
-  },
-  {
     slug: "riskrail402",
     name: "RiskRail402",
     sector: "Ferroviario y gestión de riesgos",
@@ -38,6 +29,5 @@ export const products: Product[] = [
 
 export const nav = [
   { label: "Inicio", href: "/" },
-  { label: "Open2Licita", href: "/open2licita" },
   { label: "RiskRail402", href: "/riskrail402" },
 ];

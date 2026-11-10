@@ -8,9 +8,9 @@ import { Method } from "@/components/home/method";
 import { ContactCta } from "@/components/home/contact-cta";
 
 export const metadata: Metadata = {
-  title: { absolute: "OPENvarez — Productos SaaS con IA para sectores regulados" },
+  title: { absolute: "OPENvarez — Software e IA para el ferrocarril" },
   description:
-    "Plataformas SaaS con IA para el análisis de licitaciones públicas de la construcción y la digitalización del ferrocarril.",
+    "Plataformas SaaS con IA para la digitalización del ferrocarril.",
 };
 
 export default function Home() {

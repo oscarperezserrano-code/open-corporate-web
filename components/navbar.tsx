@@ -20,26 +20,11 @@ export function Navbar() {
     return (
       <HomeNavbar
         links={[
-          { label: "Líneas de negocio", href: "/#lineas" },
+          { label: "RiskRail402", href: "/#lineas" },
           { label: "Qué hacemos", href: "/#que-hacemos" },
           { label: "Cómo trabajamos", href: "/#metodo" },
         ]}
         ctaHref="/#contacto"
-        logoHref="/"
-      />
-    );
-  }
-
-  if (pathname === "/open2licita") {
-    return (
-      <HomeNavbar
-        links={[
-          { label: "Inicio", href: "/" },
-          { label: "Funciones", href: "#funciones" },
-          { label: "Cómo funciona", href: "#proceso" },
-        ]}
-        ctaLabel="Solicita una demo"
-        ctaHref="#demo"
         logoHref="/"
       />
     );
@@ -96,12 +81,6 @@ export function Navbar() {
               </Link>
             );
           })}
-          <Link
-            href="/open2licita#demo"
-            className="ml-2.5 rounded-lg bg-accent px-5 py-2.5 text-sm font-bold text-accent-ink transition-colors hover:bg-accent-hover"
-          >
-            Solicita una demo
-          </Link>
         </nav>
 
         <button

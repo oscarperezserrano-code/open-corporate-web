@@ -9,7 +9,7 @@ import { interTight } from "@/lib/fonts";
 export type HomeNavLink = { label: string; href: string };
 
 const defaultLinks: HomeNavLink[] = [
-  { label: "Líneas de negocio", href: "#lineas" },
+  { label: "RiskRail402", href: "#lineas" },
   { label: "Qué hacemos", href: "#que-hacemos" },
   { label: "Cómo trabajamos", href: "#metodo" },
 ];

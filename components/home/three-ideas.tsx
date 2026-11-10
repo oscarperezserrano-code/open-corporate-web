@@ -13,8 +13,8 @@ const ideas = [
   },
   {
     icon: List,
-    title: "Hecho para sectores regulados",
-    text: "Diseñado en torno a la normativa y a los procesos reales de cada sector.",
+    title: "Hecho para el ferrocarril",
+    text: "Diseñado en torno a la normativa y a los procesos reales del sector ferroviario.",
   },
 ];
 

@@ -12,7 +12,13 @@ export function ContactCta() {
           href="mailto:info@openvarez.com"
           className="mt-10 inline-flex items-center gap-2 rounded-full bg-[#ECF3EE] px-8 py-4 text-base font-semibold text-[#030604] transition-colors hover:bg-[#4ADE80]"
         >
-          info@openvarez.com →
+          Solicita una demo →
+        </a>
+        <a
+          href="mailto:info@openvarez.com"
+          className="mt-4 text-sm text-[#9DB0A4] transition-colors hover:text-[#4ADE80]"
+        >
+          info@openvarez.com
         </a>
       </div>
     </section>

@@ -26,13 +26,13 @@ export function BusinessLines() {
             <div className="mt-7 flex flex-wrap items-center gap-6">
               <Link
                 href="/riskrail402"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#4ADE80] transition-colors hover:text-[#BBF7D0]"
+                className="rounded-full bg-[#ECF3EE] px-7 py-3.5 text-sm font-semibold text-[#030604] transition-colors hover:bg-[#4ADE80]"
               >
-                Ver producto →
+                Ver RiskRail402
               </Link>
               <Link
                 href="#contacto"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#4ADE80] transition-colors hover:text-[#BBF7D0]"
+                className="text-sm font-semibold text-[#ECF3EE] transition-colors hover:text-[#4ADE80]"
               >
                 Solicita una demo →
               </Link>

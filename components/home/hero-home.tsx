@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { BrainNetwork } from "@/components/home/brain-network";
 import { CursorGlow } from "@/components/home/cursor-glow";
 
@@ -6,7 +5,7 @@ export function HeroHome() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden px-6 pb-24 pt-[clamp(120px,16vw,180px)]"
+      className="relative overflow-hidden px-6 pb-0 pt-[clamp(120px,16vw,180px)]"
     >
       <BrainNetwork />
       <CursorGlow />
@@ -32,21 +31,6 @@ export function HeroHome() {
             . Digitalizamos los procesos de control y gestión para que operar,
             decidir y controlar sea más simple, más seguro y más rápido.
           </p>
-
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <Link
-              href="/riskrail402"
-              className="rounded-full bg-[#ECF3EE] px-7 py-3.5 text-sm font-semibold text-[#030604] transition-colors hover:bg-[#4ADE80]"
-            >
-              Ver RiskRail402
-            </Link>
-            <Link
-              href="#contacto"
-              className="text-sm font-semibold text-[#ECF3EE] transition-colors hover:text-[#4ADE80]"
-            >
-              Solicita una demo →
-            </Link>
-          </div>
         </div>
       </div>
     </section>

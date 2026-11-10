@@ -23,12 +23,20 @@ export function BusinessLines() {
               Reglamento (UE) 402/2013, sin procesos manuales y con
               trazabilidad de medidas y responsabilidades.
             </p>
-            <Link
-              href="/riskrail402"
-              className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#4ADE80] transition-colors hover:text-[#BBF7D0]"
-            >
-              Ver producto →
-            </Link>
+            <div className="mt-7 flex flex-wrap items-center gap-6">
+              <Link
+                href="/riskrail402"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#4ADE80] transition-colors hover:text-[#BBF7D0]"
+              >
+                Ver producto →
+              </Link>
+              <Link
+                href="#contacto"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#4ADE80] transition-colors hover:text-[#BBF7D0]"
+              >
+                Solicita una demo →
+              </Link>
+            </div>
           </div>
         </div>
       </div>

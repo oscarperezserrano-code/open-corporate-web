@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <div className={`${interTight.className} bg-[#030604] text-[#ECF3EE]`}>
       <HeroHome />
-      <ThreeIdeas />
       <BusinessLines />
+      <ThreeIdeas />
       <WhatWeDo />
       <Method />
       <ContactCta />

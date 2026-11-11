@@ -7,7 +7,7 @@ export function BusinessLines() {
   return (
     <section id="lineas" className="mx-auto max-w-[1240px] px-6 py-24">
       <p className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#9DB0A4]">
-        Nuestra primera aplicación
+        Nuestra aplicación de seguridad
       </p>
 
       <div className="home-reveal mt-10">

@@ -32,6 +32,14 @@ export function HomeFooter() {
             >
               Privacidad
             </Link>
+            <a
+              href="https://www.linkedin.com/company/openvarez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#9DB0A4] transition-colors hover:text-[#4ADE80]"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>

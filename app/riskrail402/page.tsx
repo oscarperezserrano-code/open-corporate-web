@@ -184,9 +184,19 @@ export default function RiskRail402Page() {
         className="bg-gradient-to-b from-transparent to-[#4ADE80]/10 px-6 py-24"
       >
         <div className="mx-auto grid max-w-[1240px] gap-10 lg:grid-cols-2">
-          <h2 className="home-reveal text-[clamp(32px,4.2vw,52px)] font-bold leading-[1.06] tracking-[-0.02em] text-[#ECF3EE]">
-            Veamos RiskRail402 en acción.
-          </h2>
+          <div className="home-reveal">
+            <h2 className="text-[clamp(32px,4.2vw,52px)] font-bold leading-[1.06] tracking-[-0.02em] text-[#ECF3EE]">
+              Veamos RiskRail402 en acción.
+            </h2>
+            <a
+              href="https://www.linkedin.com/showcase/riskrail402/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block text-sm font-semibold text-[#ECF3EE] transition-colors hover:text-[#4ADE80]"
+            >
+              RiskRail402 en LinkedIn
+            </a>
+          </div>
           <div className="home-reveal">
             <ContactForm product="RiskRail402" />
           </div>
